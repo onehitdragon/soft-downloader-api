@@ -14,6 +14,7 @@ import javax.validation.constraints.NotBlank;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -46,5 +47,10 @@ public class SoftController {
         soft.setCreateDate(new Date());
 
         return softRepository.insert(soft);
+    }
+
+    @DeleteMapping("/{idSoft}")
+    public void deleteSoft(@PathVariable(value = "idSoft") @Min(1) String id){
+        softRepository.delete(Integer.parseInt(id));
     }
 }

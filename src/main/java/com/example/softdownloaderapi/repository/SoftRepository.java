@@ -42,4 +42,13 @@ public class SoftRepository {
 
         return getSoft(id);
     }
+
+    public void delete(int id){
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        String queryStr = "DELETE FROM software WHERE id = " + id;
+        session.createNativeQuery(queryStr).executeUpdate();
+        transaction.commit();
+        session.close();
+    }
 }
