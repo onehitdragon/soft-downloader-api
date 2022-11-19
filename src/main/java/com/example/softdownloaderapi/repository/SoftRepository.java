@@ -31,4 +31,8 @@ public class SoftRepository {
             session.close();
         }
     }
+
+    public void insert(Soft soft){
+        
+    }
 }
