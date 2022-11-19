@@ -22,5 +22,7 @@
 
         <mapping class="com.example.softdownloaderapi.model.ParentCategory"/>
         <mapping class="com.example.softdownloaderapi.model.ChildCategory"/>
+        <mapping class="com.example.softdownloaderapi.model.Role"/>
+        <mapping class="com.example.softdownloaderapi.model.User"/>
     </session-factory>
 </hibernate-configuration>

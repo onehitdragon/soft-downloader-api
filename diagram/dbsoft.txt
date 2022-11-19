@@ -154,6 +154,65 @@ VALUES ('Ghost Win 10 22H2 Home SL & Pro – No & Full Soft, Update October 2022
     "value": "Chúc các bạn cài đặt thành công!"
   }
 ]', 1, 18694, CURRENT_DATE);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 10 LTSC 21H2 – No & Full Soft, Update December 2021', '[
+  {
+    "type": "list",
+    "title": "Thông tin",
+    "value": [
+      "Bản ghost được làm từ bộ cài Windows 10 LTSC 21H2 2021 nguyên gốc (OS Build 19044.1348).",
+      "Bản no soft không cài bất kì phần mềm nào ngoài bật Net Framwork 3.5 và WinRAR.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital, Windows Update và Defender.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/12/Win10.LTSC_.21H2.png?v=1649162903"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/12/Win10.LTSC_.21H2.x64.png?v=1638541831"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/12/Win10.LTSC_.21H2.FullSoft.png?v=1638541796"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Win10.22H2.Oct_.2022.png"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Win10.22H2.AIO_.png?v=1666503933"
+  },
+  {
+    "type": "list",
+    "title": "Chú ý",
+    "value": [
+      {
+        "type": "contentWithLink",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "link": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 25594, CURRENT_DATE);
 
 INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (1, 8);
 
