@@ -21,5 +21,6 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
         <mapping class="com.example.softdownloaderapi.model.ParentCategory"/>
+        <mapping class="com.example.softdownloaderapi.model.ChildCategory"/>
     </session-factory>
 </hibernate-configuration>

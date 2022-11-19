@@ -1,0 +1,183 @@
+CREATE TABLE Role(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255)
+);
+
+CREATE TABLE Users(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) UNIQUE,
+    password VARCHAR(255),
+    fullName VARCHAR(255),
+    createDate DateTime,
+    roleId INT,
+    FOREIGN KEY (roleId) REFERENCES Role(id)
+);
+
+CREATE TABLE ParentCategory(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255)
+);
+
+CREATE TABLE ChildCategory(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255),
+    parentCategoryId INT,
+    FOREIGN KEY (parentCategoryId) REFERENCES ParentCategory (id)
+);
+
+CREATE TABLE Software(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255),
+    content TEXT,
+    authorId INT,
+    amountView INT,
+    createDate DateTime,
+    FOREIGN KEY (authorId) REFERENCES Users (id)
+);
+
+CREATE TABLE SoftwareCategory(
+	softwareId INT,
+    childCategoryId INT,
+    FOREIGN KEY (softwareId) REFERENCES Software (id),
+    FOREIGN KEY (childCategoryId) REFERENCES ChildCategory (id)
+);
+
+CREATE TABLE Comments(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    content TEXT,
+    commenterId INT,
+    softwareId INT,
+    createDate DateTime,
+    FOREIGN KEY (commenterId) REFERENCES Users (id),
+    FOREIGN KEY (softwareId) REFERENCES Software (id)
+);
+
+CREATE TABLE ReplyComment(
+	commentId INT,
+    replyCommentId INT,
+    FOREIGN KEY (commentId) REFERENCES Comments (id),
+    FOREIGN KEY (replyCommentId) REFERENCES Comments (id)
+);
+
+INSERT INTO Role(name) VALUES ("Admin");
+INSERT INTO Role(name) VALUES ("User");
+
+INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('admin', '12345', 'Nguyễn Văn Admin', CURRENT_DATE, 1);
+INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('vinh', '12345', 'Nguyễn Văn V', CURRENT_DATE, 1);
+INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('A', '12345', 'Nguyễn Văn A', CURRENT_DATE, 2);
+INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('B', '12345', 'Nguyễn Văn B', CURRENT_DATE, 2);
+INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('C', '12345', 'Nguyễn Văn C', CURRENT_DATE, 2);
+INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('D', '12345', 'Nguyễn Văn D', CURRENT_DATE, 2);
+INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('E', '12345', 'Nguyễn Văn E', CURRENT_DATE, 2);
+
+INSERT INTO ParentCategory(name) VALUES ('Window Os');
+INSERT INTO ParentCategory(name) VALUES ('Ghost Window');
+INSERT INTO ParentCategory(name) VALUES ('Driver');
+INSERT INTO ParentCategory(name) VALUES ('Phần mềm');
+INSERT INTO ParentCategory(name) VALUES ('Thủ thuật');
+
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Window 7', 1);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Window 8', 1);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Window 10', 1);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Window 11', 1);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Ghost Window XP', 2);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Ghost Window 7', 2);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Ghost Window 8', 2);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Ghost Window 10', 2);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Ghost Window 11', 2);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Network Driver', 3);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Office Driver', 3);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Software Driver', 3);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Lập trình', 4);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Office', 4);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Gõ tiếng việt', 4);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Đồ hoạ', 4);
+INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Máy tính', 5);
+
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 10 22H2 Home SL & Pro – No & Full Soft, Update October 2022', '[
+  {
+    "type": "list",
+    "title": "Thông tin",
+    "value": [
+      "Ghost Win 10 22H2 được làm từ bộ cài Win 10 22H2 (Update Build 19045.2130) nguyên gốc lược bỏ các apps không cần thiết, giữ lại Defender và Store.",
+      "Cho phép đặt tên User trong quá trình cài đặt (tương tự cài từ ISO gốc).",
+      "Bản no soft không cài bất kì phần mềm nào ngoài bật Net Framwork 3.5 và WinRAR.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital, Windows Update và Defender.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win10.22H2.png?v=1666503928"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win10.22H2.FullSoft.png?v=1666503923"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win10.Oct_.2022.png?v=1666503931"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Win10.22H2.Oct_.2022.png"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Win10.22H2.AIO_.png?v=1666503933"
+  },
+  {
+    "type": "list",
+    "title": "Chú ý",
+    "value": [
+      {
+        "type": "contentWithLink",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "link": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 18694, CURRENT_DATE);
+
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (1, 8);
+
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('mình xin cách hiện tại biểu tượng mũi tên của Shortcut và mình không tải được Paint 3D trên Store vs AD', 4, 1, CURRENT_DATE);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('chào bro. bạn ghost rất tốt nhưng có điều mình ko thể kích hoạt offcie đc', 3, 1, CURRENT_DATE);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Ad cho mình hỏi bản này đã tich hợp winrar vào menu chuột phải chưa nhỉ, bản trước mình ko thấy có
+Thank alll', 6, 1, CURRENT_DATE);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Không mở được xbox game bar bạn ơi', 5, 1, CURRENT_DATE);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Bạn sử dụng WindowsShortcutArrowEditor, các app vẫn tải và sử dụng bình thường mà bạn.', 1, 1, CURRENT_DATE);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Bạn dùng tool active trong C:\Extra là được.', 2, 1, CURRENT_DATE);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Bản ghost của Admin làm xài ổn định, mượt cài 3-4 máy ở nhà xài phà phà
+Mình tải bản ghost iso về cài máy chỉ hiện bản Home SL ko thấy bản Pro
+Admin xem lại
+Cám ơn Admin đã làm những bản ghost chất lượng', 7, 1, CURRENT_DATE);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Bạn tải file iso lâu chưa, mình mới update lại file iso gần đây không biết còn gặp tình trạng này nữa không.', 2, 1, CURRENT_DATE);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Mình mới tải ngày 9/11 để cài lại win cho con asus', 7, 1, CURRENT_DATE);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Bản đó là mình đã update lại rồi bạn ạ.', 2, 1, CURRENT_DATE);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Em tải 2 ngày trước bản Iso vẫn k có bản Pro admin.', 7, 1, CURRENT_DATE);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Mình sẽ kiểm tra thêm nha.', 2, 1, CURRENT_DATE);
+
+INSERT INTO ReplyComment(commentId, replyCommentId) VALUES (5, 1);
+INSERT INTO ReplyComment(commentId, replyCommentId) VALUES (6, 2);
+INSERT INTO ReplyComment(commentId, replyCommentId) VALUES (8, 7);
+INSERT INTO ReplyComment(commentId, replyCommentId) VALUES (9, 8);
+INSERT INTO ReplyComment(commentId, replyCommentId) VALUES (10, 9);
+INSERT INTO ReplyComment(commentId, replyCommentId) VALUES (11, 10);
+INSERT INTO ReplyComment(commentId, replyCommentId) VALUES (12, 11);
