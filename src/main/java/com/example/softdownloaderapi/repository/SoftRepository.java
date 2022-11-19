@@ -4,6 +4,7 @@ import javax.persistence.NoResultException;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -32,7 +33,13 @@ public class SoftRepository {
         }
     }
 
-    public void insert(Soft soft){
-        
+    public Soft insert(Soft soft){
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        int id = (int) session.save("software", soft);
+        transaction.commit();
+        session.close();
+
+        return getSoft(id);
     }
 }

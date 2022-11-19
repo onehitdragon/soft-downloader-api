@@ -4,7 +4,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.softdownloaderapi.model.Soft;
+import com.example.softdownloaderapi.model.User;
 import com.example.softdownloaderapi.repository.SoftRepository;
+
+import java.util.Date;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
@@ -29,8 +32,19 @@ public class SoftController {
     }
 
     @PostMapping("/add")
-    public String addSoft(@NotBlank String title, @NotBlank String content,
+    public Soft addSoft(@NotBlank String title, @NotBlank String content,
         @NotBlank @Min(1) String authorId){
-        return authorId;
+        Soft soft = new Soft();
+
+        User user = new User();
+        user.setId(authorId);
+
+        soft.setTitle(title);
+        soft.setAuthor(user);
+        soft.setContent(content);
+        soft.setAmountView(0);
+        soft.setCreateDate(new Date());
+
+        return softRepository.insert(soft);
     }
 }
