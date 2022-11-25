@@ -24,4 +24,13 @@ public class Role {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Role(String id){
+        this.id = id;
+    }
+
+    public Role(String id, String name){
+        this.id = id;
+        this.name = name;
+    }
 }
