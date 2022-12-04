@@ -26,5 +26,6 @@
         <mapping class="com.example.softdownloaderapi.model.User"/>
         <mapping class="com.example.softdownloaderapi.model.Soft"/>
         <mapping class="com.example.softdownloaderapi.model.Comment"/>
+        <mapping class="com.example.softdownloaderapi.model.ReplyComment"/>
     </session-factory>
 </hibernate-configuration>

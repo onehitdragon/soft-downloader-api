@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 
 @Entity(name = "comments")
 public class Comment {
@@ -27,7 +28,8 @@ public class Comment {
     private Soft soft;
     @Column
     private Date createDate;
-    private List<Comment> replyComment;
+    @Transient
+    private List<Comment> replyComments;
 
     public int getId() {
         return id;
@@ -59,11 +61,10 @@ public class Comment {
     public void setSoft(Soft soft) {
         this.soft = soft;
     }
-    public List<Comment> getReplyComment() {
-        return replyComment;
+    public List<Comment> getReplyComments() {
+        return replyComments;
     }
-    public void setReplyComment(List<Comment> replyComment) {
-        this.replyComment = replyComment;
+    public void setReplyComments(List<Comment> replyComments) {
+        this.replyComments = replyComments;
     }
-    
 }
