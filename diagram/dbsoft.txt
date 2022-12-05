@@ -63,13 +63,13 @@ CREATE TABLE ReplyComment(
 INSERT INTO Role(name) VALUES ("Admin");
 INSERT INTO Role(name) VALUES ("User");
 
-INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('admin', '12345', 'Nguyễn Văn Admin', CURRENT_DATE, 1);
-INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('vinh', '12345', 'Nguyễn Văn V', CURRENT_DATE, 1);
-INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('A', '12345', 'Nguyễn Văn A', CURRENT_DATE, 2);
-INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('B', '12345', 'Nguyễn Văn B', CURRENT_DATE, 2);
-INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('C', '12345', 'Nguyễn Văn C', CURRENT_DATE, 2);
-INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('D', '12345', 'Nguyễn Văn D', CURRENT_DATE, 2);
-INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('E', '12345', 'Nguyễn Văn E', CURRENT_DATE, 2);
+INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('admin', '12345', 'Nguyễn Văn Admin', CURRENT_TIMESTAMP, 1);
+INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('vinh', '12345', 'Nguyễn Văn V', CURRENT_TIMESTAMP, 1);
+INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('A', '12345', 'Nguyễn Văn A', CURRENT_TIMESTAMP, 2);
+INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('B', '12345', 'Nguyễn Văn B', CURRENT_TIMESTAMP, 2);
+INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('C', '12345', 'Nguyễn Văn C', CURRENT_TIMESTAMP, 2);
+INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('D', '12345', 'Nguyễn Văn D', CURRENT_TIMESTAMP, 2);
+INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('E', '12345', 'Nguyễn Văn E', CURRENT_TIMESTAMP, 2);
 
 INSERT INTO ParentCategory(name) VALUES ('Window Os');
 INSERT INTO ParentCategory(name) VALUES ('Ghost Window');
@@ -91,7 +91,7 @@ INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Network Driv
 INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Office Driver', '/images/category/bus-driver.png', 3);
 INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Software Driver', '/images/category/soft-drivers.png', 3);
 INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Lập trình', '/images/category/coding-language.png', 4);
-INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Database', '/images/category/database.png', 4);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Công cụ', '/images/category/database.png', 4);
 INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Office', '/images/category/office.png', 4);
 INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Gõ tiếng việt', '/images/category/typing.png', 4);
 INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Đồ hoạ', '/images/category/illustrator.png', 4);
@@ -100,8 +100,11 @@ INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Máy tính',
 INSERT INTO Software(title, content, authorId, amountView, createDate)
 VALUES ('Ghost Win 10 22H2 Home SL & Pro – No & Full Soft, Update October 2022', '[
   {
+    "type": "title",
+    "value": "Thông Tin"
+  },
+  {
     "type": "list",
-    "title": "Thông tin",
     "value": [
       "Ghost Win 10 22H2 được làm từ bộ cài Win 10 22H2 (Update Build 19045.2130) nguyên gốc lược bỏ các apps không cần thiết, giữ lại Defender và Store.",
       "Cho phép đặt tên User trong quá trình cài đặt (tương tự cài từ ISO gốc).",
@@ -110,6 +113,10 @@ VALUES ('Ghost Win 10 22H2 Home SL & Pro – No & Full Soft, Update October 2022
       "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital, Windows Update và Defender.",
       "Không cá nhân hóa bất kì thành phần nào của Windows."
     ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
   },
   {
     "type": "image",
@@ -132,13 +139,16 @@ VALUES ('Ghost Win 10 22H2 Home SL & Pro – No & Full Soft, Update October 2022
     "url": "https://lehait.net/wp-content/uploads/2022/10/Win10.22H2.AIO_.png?v=1666503933"
   },
   {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
     "type": "list",
-    "title": "Chú ý",
     "value": [
       {
-        "type": "contentWithLink",
+        "type": "text",
         "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
-        "link": [
+        "links": [
           {
             "value": "này",
             "nth": 1, 
@@ -156,12 +166,15 @@ VALUES ('Ghost Win 10 22H2 Home SL & Pro – No & Full Soft, Update October 2022
     "type": "para",
     "value": "Chúc các bạn cài đặt thành công!"
   }
-]', 1, 18694, CURRENT_DATE);
+]', 1, 18694, CURRENT_TIMESTAMP);
 INSERT INTO Software(title, content, authorId, amountView, createDate)
 VALUES ('Ghost Win 10 LTSC 21H2 – No & Full Soft, Update December 2021', '[
   {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
     "type": "list",
-    "title": "Thông tin",
     "value": [
       "Bản ghost được làm từ bộ cài Windows 10 LTSC 21H2 2021 nguyên gốc (OS Build 19044.1348).",
       "Bản no soft không cài bất kì phần mềm nào ngoài bật Net Framwork 3.5 và WinRAR.",
@@ -169,6 +182,10 @@ VALUES ('Ghost Win 10 LTSC 21H2 – No & Full Soft, Update December 2021', '[
       "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital, Windows Update và Defender.",
       "Không cá nhân hóa bất kì thành phần nào của Windows."
     ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
   },
   {
     "type": "image",
@@ -191,13 +208,16 @@ VALUES ('Ghost Win 10 LTSC 21H2 – No & Full Soft, Update December 2021', '[
     "url": "https://lehait.net/wp-content/uploads/2022/10/Win10.22H2.AIO_.png?v=1666503933"
   },
   {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
     "type": "list",
-    "title": "Chú ý",
     "value": [
       {
-        "type": "contentWithLink",
+        "type": "text",
         "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
-        "link": [
+        "links": [
           {
             "value": "này",
             "nth": 1, 
@@ -215,26 +235,2177 @@ VALUES ('Ghost Win 10 LTSC 21H2 – No & Full Soft, Update December 2021', '[
     "type": "para",
     "value": "Chúc các bạn cài đặt thành công!"
   }
-]', 1, 25594, CURRENT_DATE);
+]', 1, 25594, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 10 21H2 – No & Full Soft, Update April 2022', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Bản ghost được làm từ bộ cài Windows 10 LTSC 21H2 2021 nguyên gốc (OS Build 19044.1348).",
+      "Bản no soft không cài bất kì phần mềm nào ngoài bật Net Framwork 3.5 và WinRAR.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital, Windows Update và Defender.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win10.21H2.April_.2022.png?v=1649481838"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win10.21H2.April_.png?v=1649481842"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win10.21H2.April_.2022.Full_.Soft_.png?v=1649481834"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win10.21H2.1620.png"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win10.21H2.Office.png?v=1649481844"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 2594, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 10 Lite 21H2 – No & Full Soft – Nhanh, Mượt, Nhẹ 2022', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Bản ghost được làm từ bộ cài Windows 10 LTSC 21H2 2021 nguyên gốc (OS Build 19044.1348).",
+      "Bản no soft không cài bất kì phần mềm nào ngoài bật Net Framwork 3.5 và WinRAR.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital, Windows Update và Defender.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/02/Ghost.Win10.Lite_.png?v=1649162894"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/02/Ghost.Win10.Lite_.2022.png?v=1644121155"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/02/Ghost.Win10.Lite_.Fast_.png"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/02/Ghost.Win10.Lite_.FullSoft.png"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/02/Ghost.Win10.Lite_.x64.png?v=1644121164"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 10851, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 10 Home SL 21H2 – No & Full Soft, Update January 2022', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Bản ghost được làm từ bộ cài Windows 10 LTSC 21H2 2021 nguyên gốc (OS Build 19044.1348).",
+      "Bản no soft không cài bất kì phần mềm nào ngoài bật Net Framwork 3.5 và WinRAR.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital, Windows Update và Defender.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/01/Ghost-Win-10-Home.png?v=1649162897"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/01/Ghost-Win-10-Home-SL.png?v=1642823572"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/01/Win-10-Home-SL.png?v=1642823580"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/01/Ghost-Win-10-Home-Full-Soft.png?v=1642823567"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/01/Ghost-Win-10-Home-21H2.png"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 18914, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 10 LTSC 21H2 – No & Full Soft, Update December 2021', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Bản ghost được làm từ bộ cài Windows 10 LTSC 21H2 2021 nguyên gốc (OS Build 19044.1348).",
+      "Bản no soft không cài bất kì phần mềm nào ngoài bật Net Framwork 3.5 và WinRAR.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital, Windows Update và Defender.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/01/Ghost-Win-10-Home.png?v=1649162897"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/12/Win10.LTSC_.21H2.png?v=1649162903"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/12/Win10.LTSC_.21H2.FullSoft.png?v=1638541796"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/12/Win10.LTSC_.2021.png"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/01/Ghost-Win-10-Home-21H2.png"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 6814, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 10 21H1- No & Full Soft, Bamboo Sep 2021', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Bản ghost được làm từ bộ cài Windows 10 LTSC 21H2 2021 nguyên gốc (OS Build 19044.1348).",
+      "Bản no soft không cài bất kì phần mềm nào ngoài bật Net Framwork 3.5 và WinRAR.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital, Windows Update và Defender.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.jpg?v=1649162923"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.21H1.Bamboo.jpg?v=1632585005"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.fs_.jpg?v=1632585013"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.full_.png"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.version.png"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 36846, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 10 20H2 – No & Full Soft, Update February 2021', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Bản ghost được làm từ bộ cài Windows 10 LTSC 21H2 2021 nguyên gốc (OS Build 19044.1348).",
+      "Bản no soft không cài bất kì phần mềm nào ngoài bật Net Framwork 3.5 và WinRAR.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital, Windows Update và Defender.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/02/Win-10-20H2.jpg?v=1614501033"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/02/Ghost-Win-10-20H2-1.jpg?v=1649162933"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.fs_.jpg?v=1632585013"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.full_.png"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.version.png"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 9614, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 10 2004 20H1 – No & Full Soft, Update May 2020', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Bản ghost được làm từ bộ cài Windows 10 LTSC 21H2 2021 nguyên gốc (OS Build 19044.1348).",
+      "Bản no soft không cài bất kì phần mềm nào ngoài bật Net Framwork 3.5 và WinRAR.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital, Windows Update và Defender.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2020/05/Win-10-2004.jpg?v=1649162938"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2020/05/Ghost-Win-10-2004.jpg?v=1590826994"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.fs_.jpg?v=1632585013"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.full_.png"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.version.png"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 13902, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 11 Lite 22H2 – No & Full Soft, October 2022', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Ghost Win 11 Lite được rebuild từ bộ cài Windows 11 X-Lite (22621.675) by FBConan giữ lại Defender, Store. (chi tiết ở cuối bài viết).",
+      "Bản no soft chỉ cài đặt Google Chrome và WinRaR.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital và office.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Win11.Lite_.22H2.png?v=1666158112"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Win11.Lite_.FullSoft.png?v=1666158114"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Win11.Lite_.O2021.png?v=1666158117"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win11.Lite_.22H2.png"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 11138, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 11 22H2 – No & Full Soft, September 2022', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Ghost Win 11 Lite được rebuild từ bộ cài Windows 11 X-Lite (22621.675) by FBConan giữ lại Defender, Store. (chi tiết ở cuối bài viết).",
+      "Bản no soft chỉ cài đặt Google Chrome và WinRaR.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital và office.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/09/Ghost.Win11.22H2.png?v=1664017085"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/09/Win11.22H2.png?v=1664017093"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/09/Win11.22H2.FS_.png?v=1664074755"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/09/Win11.22H2.Office.png?v=1664017089"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win11.Lite_.22H2.png"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 34944, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 11 21H2 – No & Full Soft October 2021', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Ghost Win 11 Lite được rebuild từ bộ cài Windows 11 X-Lite (22621.675) by FBConan giữ lại Defender, Store. (chi tiết ở cuối bài viết).",
+      "Bản no soft chỉ cài đặt Google Chrome và WinRaR.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital và office.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/10/Win11.21H2.png?v=1649162915"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/10/Ghost.Win11.21H2.png?v=1633768397"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/10/Ghost.Win11.Full_.Soft_.png?v=1633768399"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/10/Win11.Office2021.png?v=1633768414"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win11.Lite_.22H2.png"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 18944, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 11 Pro Insider – No & Full Soft (Build 22000.168)', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Ghost Win 11 Lite được rebuild từ bộ cài Windows 11 X-Lite (22621.675) by FBConan giữ lại Defender, Store. (chi tiết ở cuối bài viết).",
+      "Bản no soft chỉ cài đặt Google Chrome và WinRaR.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital và office.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/09/Win11.Pro_.Autumn-1536x839.jpg?v=1649162919"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/09/Ghost.Win11.Pro_-1536x839.jpg?v=1630502040"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/09/Ghost.Win11.FullSoft.jpg"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/10/Win11.Office2021.png?v=1633768414"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win11.Lite_.22H2.png"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 31468, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 11 Pro Insider Preview – No Soft (Build 22000.100)', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Ghost Win 11 Lite được rebuild từ bộ cài Windows 11 X-Lite (22621.675) by FBConan giữ lại Defender, Store. (chi tiết ở cuối bài viết).",
+      "Bản no soft chỉ cài đặt Google Chrome và WinRaR.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital và office.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/07/Ghost.Win_.11.jpg?v=1649162924"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/07/Win.11.Pro_.jpg?v=1627035188"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/09/Ghost.Win11.FullSoft.jpg"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/10/Win11.Office2021.png?v=1633768414"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win11.Lite_.22H2.png"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 14936, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 11 Pro – No & Full Soft, Bamboo December 2021', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Ghost Win 11 Lite được rebuild từ bộ cài Windows 11 X-Lite (22621.675) by FBConan giữ lại Defender, Store. (chi tiết ở cuối bài viết).",
+      "Bản no soft chỉ cài đặt Google Chrome và WinRaR.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital và office.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/12/Win11.Pro_.Bamboo.png?v=1649162900"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/12/Ghost.Win11.Pro_.png?v=1639840039"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/09/Ghost.Win11.FullSoft.jpg"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/10/Win11.Office2021.png?v=1633768414"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win11.Lite_.22H2.png"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 47156, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 7 2022 – No & Full Soft, Full Driver Update April 2022', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Ghost Win 7 2022 được rebuild từ Windows 7 Ultimate SP1 Full Update April 2022 và không lược bỏ thành phần của Windows.",
+      "Tích hợp driver USB 3.0 và Easy Driver 7 mới nhất.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital và office.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.jpg?v=1650032828"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.April_.2022.jpg?v=1650032829"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.FullSoft.png?v=1650032570"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.FS_.png?v=1650032569"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.Update.png?v=1650032574"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 65849, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 7 2021 – No & Full Soft, Full Driver Update April 2021', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Ghost Win 7 2022 được rebuild từ Windows 7 Ultimate SP1 Full Update April 2022 và không lược bỏ thành phần của Windows.",
+      "Tích hợp driver USB 3.0 và Easy Driver 7 mới nhất.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital và office.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/04/Ghost.Win7_.2021.jpg?v=1618408909"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/04/Win7.April_.20201.jpg?v=1649162931"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/04/Win-7-2021-Full-Soft.jpg?v=1618408912"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.FS_.png?v=1650032569"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.Update.png?v=1650032574"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 15841, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 7 2020 – No & Full Soft, Full Update March 2020', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Ghost Win 7 2022 được rebuild từ Windows 7 Ultimate SP1 Full Update April 2022 và không lược bỏ thành phần của Windows.",
+      "Tích hợp driver USB 3.0 và Easy Driver 7 mới nhất.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital và office.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2020/03/ghost-win7-2020-moi-nhat.jpg?v=1607068439"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2020/03/ghost-win7-2020.jpg?v=1649162947"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2020/03/ghost-win7-fullsoft.jpg?v=1607068437"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.FS_.png?v=1650032569"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.Update.png?v=1650032574"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 95541, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 7 Ultimate 2018 – Full Soft Không Cá Nhân Hóa', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Ghost Win 7 2022 được rebuild từ Windows 7 Ultimate SP1 Full Update April 2022 và không lược bỏ thành phần của Windows.",
+      "Tích hợp driver USB 3.0 và Easy Driver 7 mới nhất.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital và office.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2018/06/2018-06-12_205046.jpg?v=1649162965"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2018/06/2018-06-12_205123.jpg"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2018/06/2018-06-12_205235.jpg"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2018/06/2018-06-12_205349.jpg"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.Update.png?v=1650032574"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 54134, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 7 Ultimate 2018 – No Soft & Full Driver', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Ghost Win 7 2022 được rebuild từ Windows 7 Ultimate SP1 Full Update April 2022 và không lược bỏ thành phần của Windows.",
+      "Tích hợp driver USB 3.0 và Easy Driver 7 mới nhất.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital và office.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2018/02/2008-01-01_001457.jpg?v=1649162968"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2018/02/2008-01-01_001508.jpg"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2018/02/2008-01-01_001528.jpg"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2018/06/2018-06-12_205349.jpg"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.Update.png?v=1650032574"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 136114, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 7 Ultimate – Full Soft, New Summer 2016', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Ghost Win 7 2022 được rebuild từ Windows 7 Ultimate SP1 Full Update April 2022 và không lược bỏ thành phần của Windows.",
+      "Tích hợp driver USB 3.0 và Easy Driver 7 mới nhất.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital và office.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2016/05/2016-05-05_192101-1.jpg"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2016/05/2016-05-05_192019-1.jpg?v=1649162978"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2016/05/2016-05-05_192202-1.png"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2018/06/2018-06-12_205349.jpg"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.Update.png?v=1650032574"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 94368, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Ghost Win 7 Lite Autumn – Nhanh, Mượt, Nhẹ', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Ghost Win 7 2022 được rebuild từ Windows 7 Ultimate SP1 Full Update April 2022 và không lược bỏ thành phần của Windows.",
+      "Tích hợp driver USB 3.0 và Easy Driver 7 mới nhất.",
+      "Bản ghost đã được tối ưu, tinh chỉnh, service,… trước khi backup.",
+      "Sau khi cài đặt các bạn có thể vào thư mục C:\\Extra để sử dụng các công cụ kích hoạt bản quyền digital và office.",
+      "Không cá nhân hóa bất kì thành phần nào của Windows."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2016/01/ghost-win7-lite-6.jpg?v=1649162977"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2016/01/ghost-win7-lite-2.jpg"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2016/01/ghost-win7-lite-1.jpg"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2016/01/ghost-win7-lite-3.png"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2016/01/ghost-win7-lite-4.png"
+  },
+  {
+    "type": "title",
+    "value": "Chú ý"
+  },
+  {
+    "type": "list",
+    "value": [
+      {
+        "type": "text",
+        "value": "Nên sử dụng IDM download để đạt tốc độ nhanh nhất. Đối với link OneDrive tham khảo bài viết này.",
+        "links": [
+          {
+            "value": "này",
+            "nth": 1, 
+            "url": "https://lehait.net/huong-dan-tai-file-tren-onedrive-de-dang/"
+          }
+        ]
+      },
+      "Sau khi download, hãy check MD5 chính xác sau đó mới thao tác cài đặt bản ghost.",
+      "File iso sẽ bao gồm phiên bản no & full soft. Đặc biệt với file iso lần này sẽ tích hợp cả phiên bản Home SL và Pro để có thể lựa chọn sử dụng tốt nhất.",
+      "Trong quá trình sử dụng hãy thực hiện dọn rác, tối ưu, chống phân mảnh với HDD để windows hoạt động tốt nhất.",
+      "Nếu gặp vấn đề khi cài đặt hoặc đóng góp ý kiến các bạn hãy để lại ý kiến bên dưới."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 66866, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Download Windows 11 22H2 Chính Thức Từ Microsoft', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "text",
+    "value": "Windows 11 22H2 là phiên bản cập nhật lớn đầu tiên của Windows 11, sau gần 1 năm kể từ khi Windows 11 chính thức ra mắt công khai. shoppingmode Microsoft đã tung bản Windows 11 22H2 chính thức vào ngày 20/09/2022 với nhiều tính năng và cải tiến mới như Start Menu với folder, Tabs trong File Explorer, giao diện Task Manager mới, các cử chỉ mới,…"
+  },
+  {
+    "type": "title",
+    "value": "Tính năng nổi bật Windows 11 22H2 (Sun Valley 2)"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Giao diện kéo và thả Snap Layout mới.",
+      "Tính năng Spotlight mới cho desktop.",
+      "Thư mục Start Menu mới để nhóm các ứng dụng.",
+      "Tùy chọn mới thay đổi số lượng pin trên Start Menu.",
+      "Tính năng kéo và thả file, ứng dụng vào thanh Taskbar.",
+      "Giao diện Task Manager mới",
+      "Tính năng Smart App Control (SAC) mới chặn các ứng dụng nguy hiểm.",
+      "Cập nhật Quick Settings với các tùy chọn điều khiển thiết bị Bluetooth."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Yêu Cầu Hệ Thống"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Bộ xử lý: CPU hoặc hệ thống 1GHz hoặc nhanh hơn",
+      "Ram: Khuyến nghị >=4GB",
+      "Dung lượng ổ cứng: 32GB",
+      "Trusted Platform Module (TPM) phiên bản 2.0.",
+      "Đồ họa: DirectX 9 trở lên với trình điều khiển WDDM 1.0",
+      "Hiển thị: Độ phân giải tối thiểu 1024 x 768"
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/09/download_win11_22h2.png?v=1663720993"
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 63354, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Tải Về Windows 11 21H2 2021 Chính Thức Từ Microsoft', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "text",
+    "value": "Microsoft vừa ra mắt Windows 11 bản chính thức từ lúc rạng sáng ngày 5/10. Ngay khi đã có bản Windows 11 thì nhiều người dùng đã bắt đầu trải nghiệm, và đã cho phản hồi khá khả quan. Cụ thể khi sử dụng Windows 11 họ cảm thấy mượt, từng âm thanh, phông chữ và biểu tượng, người dùng sẽ được trải nghiệm một Windows 11 được thiết kế hiện đại hơn, mới mẻ và tinh tế hơn."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/10/windows11-1536x864.jpg?v=1649162917"
+  },
+  {
+    "type": "title",
+    "value": "Tính năng nổi bật Windows 11 22H2 (Sun Valley 2)"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Giao diện kéo và thả Snap Layout mới.",
+      "Tính năng Spotlight mới cho desktop.",
+      "Thư mục Start Menu mới để nhóm các ứng dụng.",
+      "Tùy chọn mới thay đổi số lượng pin trên Start Menu.",
+      "Tính năng kéo và thả file, ứng dụng vào thanh Taskbar.",
+      "Giao diện Task Manager mới",
+      "Tính năng Smart App Control (SAC) mới chặn các ứng dụng nguy hiểm.",
+      "Cập nhật Quick Settings với các tùy chọn điều khiển thiết bị Bluetooth."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Yêu Cầu Hệ Thống"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Bộ xử lý: CPU hoặc hệ thống 1GHz hoặc nhanh hơn",
+      "Ram: Khuyến nghị >=4GB",
+      "Dung lượng ổ cứng: 32GB",
+      "Trusted Platform Module (TPM) phiên bản 2.0.",
+      "Đồ họa: DirectX 9 trở lên với trình điều khiển WDDM 1.0",
+      "Hiển thị: Độ phân giải tối thiểu 1024 x 768"
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/10/download-windows11.png?v=1633442265"
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 63354, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Download Windows 10 22H2 (October 2022 Update) Chính Thức', '[
+  {
+    "type": "title",
+    "value": "Thông tin"
+  },
+  {
+    "type": "text",
+    "value": "Windows 10 22H2 là phiên bản Windows 10 mới nhất hiện nay 2022. Theo Microsoft, Windows 10 22H2 đã ra mắt chính thức vào ngày 18/10/2022. Phiên bản Windows 10 mới này gần như sẽ không có các tính năng mới, thay vào đó Microsoft tập trung sửa lỗi tối ưu để đem đến một phiên bản Windows 10 October 2022 Update ổn định nhất."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Windows-10-22H2-1536x856.png?v=1666161497"
+  },
+  {
+    "type": "title",
+    "value": "Thông tin bản Win 10 Version 22H2)"
+  },
+  {
+    "type": "list",
+    "value": [
+      "HĐH: Windows 10",
+      "Tên gọi chính thức: Windows 10 October 2022 Update",
+      "Version: 22H2",
+      "Bản dựng (Build): 19045",
+      "Bản phát hành: 19045.2006",
+      "Đã cập nhật: Tháng 10/2022"
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Yêu Cầu Hệ Thống"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Bộ xử lý: CPU hoặc hệ thống 1GHz hoặc nhanh hơn",
+      "Ram: Khuyến nghị >=4GB",
+      "Dung lượng ổ cứng: 32GB",
+      "Trusted Platform Module (TPM) phiên bản 2.0.",
+      "Đồ họa: DirectX 9 trở lên với trình điều khiển WDDM 1.0",
+      "Hiển thị: Độ phân giải tối thiểu 1024 x 768"
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Windows10.22H2.png?v=1666160850"
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 9497, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Download Windows 10 Enterprise LTSC 2021 Mới Nhất', '[
+  {
+    "type": "title",
+    "value": "Giới Thiệu"
+  },
+  {
+    "type": "text",
+    "value": "Windows 10 LTSC được viết tắt với cụm từ “Long Term Servicing Channel” nghĩa là “Kênh phục dài hạn” thay vì “Nhánh dịch vụ dài hạn” như trước. Đối với Windows 10 LTSC các tính năng chính giống như Windows 10 Enterprise nhưng lược bỏ Cortana, Store và tất cả những ứng dụng thuần Windows Metro. Đối với phiên bản này Microsoft không cập nhật các tính năng không cần thiết mà thay vào đó là chỉ cập nhật bản vá khả năng bảo mật."
+  },
+  {
+    "type": "text",
+    "value": "Windows 10 LTSC 2021 là phiên bản được cập nhật dựa trên những gì đã phát hành trên Windows 10 Enterprise LTSC 2019. Bên cạnh đó nó còn dựa trên những tính năng mới trên Windows 10 21H2. Đối với phiên bản LTSC 2021 nó sẽ được bổ sung các tính năng bảo mật nâng cao để chống lại các mối đe doạ và khả năng quản lý thiết bị, quản lý ứng dụng cho người dùng."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/11/win10.lstc_.2021-1170x550.png"
+  },
+  {
+    "type": "title",
+    "value": "Thông Tin Windows 10 LTSC 2021"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Name: Windows LTSC 2021",
+      "Tên gọi chính thức: Windows 10 October 2022 Update",
+      "Version: 22H2",
+      "OS Build: 19044.1288",
+      "Bản phát hành: 19045.2006",
+      "Đã cập nhật: Tháng 10/2022"
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Yêu Cầu Hệ Thống"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Bộ xử lý: CPU hoặc hệ thống 1GHz hoặc nhanh hơn",
+      "Ram: Khuyến nghị >=4GB",
+      "Dung lượng ổ cứng: 32GB",
+      "Trusted Platform Module (TPM) phiên bản 2.0.",
+      "Đồ họa: DirectX 9 trở lên với trình điều khiển WDDM 1.0",
+      "Hiển thị: Độ phân giải tối thiểu 1024 x 768"
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Windows10.22H2.png?v=1666160850"
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 4597, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Windows 10 20H2 (October 2020 Update) Chính Thức', '[
+  {
+    "type": "title",
+    "value": "Giới Thiệu"
+  },
+  {
+    "type": "text",
+    "value": "Windows 10 20H2 (Windows 10 October 2020 Update) đã được shoppingmode Microsoft chính thức phát hành với cho tất cả người dùng. Để cập nhật lên phiên bản mới này, anh em có thể vào phần Setting -> Update & Security -> Windows Update -> Check for update để tiến hành kiểm tra và cập nhật Windows lên phiên bản 2004 này nhé. Hoặc các bạn có tải trực tiếp file ISO chính chủ từ shoppingmode Microsoft mà mình chia sẻ bên dưới để tiến hành cài đặt thủ công."
+  },
+  {
+    "type": "text",
+    "value": "Windows 10 October 2020 mang tới cho người dùng nhiều tính năng mới, hữu ích. Nổi bật trong số này chính là Start Menu và Taskbar có thiết kế mới, khoáng đạt hơn. Giao diện bên trong phần Settings cũng như các phần khác cũng được thay đổi. Windows 10 20H2 này cũng sẽ cài đặt shoppingmode Microsoft Edge nhân mới."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/11/win10.lstc_.2021-1170x550.png"
+  },
+  {
+    "type": "title",
+    "value": "Thông Tin Windows 10 LTSC 2021"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Name: Windows LTSC 2021",
+      "Tên gọi chính thức: Windows 10 October 2022 Update",
+      "Version: 22H2",
+      "OS Build: 19044.1288",
+      "Bản phát hành: 19045.2006",
+      "Đã cập nhật: Tháng 10/2022"
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Yêu Cầu Hệ Thống"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Bộ xử lý: CPU hoặc hệ thống 1GHz hoặc nhanh hơn",
+      "Ram: Khuyến nghị >=4GB",
+      "Dung lượng ổ cứng: 32GB",
+      "Trusted Platform Module (TPM) phiên bản 2.0.",
+      "Đồ họa: DirectX 9 trở lên với trình điều khiển WDDM 1.0",
+      "Hiển thị: Độ phân giải tối thiểu 1024 x 768"
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Hình Ảnh"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/10/Windows10.22H2.png?v=1666160850"
+  },
+  {
+    "type": "para",
+    "value": "Chúc các bạn cài đặt thành công!"
+  }
+]', 1, 97641, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Driver Booster 10 – Update Driver Online Tốt Nhất', '[
+  {
+    "type": "title",
+    "value": "Giới Thiệu"
+  },
+  {
+    "type": "text",
+    "value": "Driver Booster 10 là phần hỗ trợ quét để phát hiện các driver còn thiếu, các driver lỗi thời, và chỉ với 1 cú nhấn chuột, Driver Booster 10 sẽ tự động download và cài đặt, cập nhật các driver đó cho bạn. Thích hợp cho các bạn vừa cài lại Windows hoặc muốn update driver để máy tính hoạt động tốt hơn."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2020/07/Driver.Booster.10.png?v=1664723994"
+  },
+  {
+    "type": "title",
+    "value": "Tính năng"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Tự động Quét & Xác định lỗi đã lỗi thời, Thiếu và Trình điều khiển bị lỗi.",
+      "Tải về và cập nhật các trình điều khiển đã lỗi thời với một cú nhấp chuột",
+      "Không giới hạn tốc độ,cập nhật trình điều khiển ưu tiên cập nhật các trình điều khiển đã lỗi thời.",
+      "Cải thiện, giảm hệ thống đóng băng & Crashes cho Hiệu suất tốt hơn.",
+      "Tải driver tự động mới và cài đặt tại thời điểm không hoạt động của hệ thống.",
+      "Mới tự động sao lưu tất cả các trình điều khiển cho Khôi phục an toàn.",
+      "Cải thiện mức độ ưu tiên để cập nhật các thành phần trò chơi cho trò chơi tốt hơn.",
+      "Cải tiến tự động cập nhật lên phiên bản mới nhất."
+    ]
+  },
+  {
+    "type": "para",
+    "value": "Sau khi cài đặt, có thể sử dụng key bản quyền bên dưới. Các key này nằm trong chương trình khuyến mại mà hãng đã tổ chức, nên các bạn có thể active và sử dụng bình thường."
+  }
+]', 1, 97641, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Easy Driver 7.22.0912.2 – Bộ Cài Driver Offline Mới Nhất', '[
+  {
+    "type": "title",
+    "value": "Giới Thiệu"
+  },
+  {
+    "type": "text",
+    "value": "Easy Driver 7.22.0912.2 là bộ cài đặt driver offline mới nhất được tác giả Skyfree bên ITSK phát triển. Easy Driver 7 giúp bạn tìm và cài đặt driver cho phần cứng máy tính một cách nhanh chóng nhất. Điểm mạnh của phần mềm là toàn bộ quá trình đều tự động 100% cùng cơ sở dữ liệu driver rất lớn trong khi dung lượng phần mềm lại nhỏ gọn, mà không cần kết nối internet. Hỗ trợ hầu hết các dòng Driver phổ biến hiện nay chỉ duy nhất trong 1 file cài đặt. Và đặc biệt Easy Driver 7 có thể sử dụng trong môi trường Win PE."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2020/06/Easydrv7_2022.png"
+  },
+  {
+    "type": "para",
+    "value": "Bản Easy Driver 7 lần này chưa có tiếng Anh do chưa có ai viết lại. Mình sử dụng công cụ bên Hàn chia sẻ để đổi ngôn ngữ và fix bỏ các app đi kèm. Các bạn chỉ cần giải nén và cài đặt là thành công nha!"
+  }
+]', 1, 88941, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('3DP Net 21.01 – Hỗ Trợ Cài Driver Mạng Offline Tốt Nhất', '[
+  {
+    "type": "title",
+    "value": "3DP Net là gì ?"
+  },
+  {
+    "type": "text",
+    "value": "3DP Net 21.01 là bộ phần mềm giúp cài đặt driver cho card mạng LAN hay Wifi 1 cách nhanh chóng. Trong bộ cài này đã chứa đầy đủ các loại driver cho các loại main khác nhau."
+  },
+  {
+    "type": "text",
+    "value": "Bạn chỉ cần tải về và copy sang máy chưa có các mạng, chạy chương trình lên để nó dò tìm và cài đặt tự động cho máy tính. Có phần mềm này trong tay bạn không còn phải lo mất mạng internet nữa."
+  },
+  {
+    "type": "text",
+    "value": "Đầu tiên hãy click và đợi một lát để giải nén"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2017/12/1.jpg"
+  },
+  {
+    "type": "text",
+    "value": "Sau đó chương trình sẽ tự bật lên. Và bạn chọn card mạng hoặc wifi đang dùng cài đặt là có mạng"
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2017/12/2.jpg"
+  },
+  {
+    "type": "para",
+    "value": "3DP Net 21.01 kết hợp với Driver Booster sẽ là lựa chọn hoàn hảo để cập nhập driver mới nhất cho máy tính của bạ"
+  }
+]', 1, 9441, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Wandriver 6.6 – Bộ Cài Đặt Driver Offline Tốt Nhất', '[
+  {
+    "type": "title",
+    "value": "Giới Thiệu"
+  },
+  {
+    "type": "text",
+    "value": "WanDriver 6.6 là bộ cài đã tích hợp sẵn những driver đầy đủ cho Windows XP/7/8/10 32bit và 64 bit. Đây là phiên bản được cập nhật các trình driver mới hơn so với phiên bản trước đó. Thường đối với một số hệ điều hành được kể trên sẽ có thể không nhận đủ được driver nếu bạn cài Windows nguyên gốc từ Microsoft."
+  },
+  {
+    "type": "text",
+    "value": "Sự tiện lợi của phần mềm này là chỉ với vài cú click chuột là bạn đã có trong tay đầy đủ những driver còn thiếu, từ driver card màn hình (graphic), mạng (Lan, wireless), âm thanh (sound), bluetooth, Mother Board v.v…."
+  },
+  {
+    "type": "text",
+    "value": "Đối với bộ cài WanDriver 6.6 mà Lê Hà Blog giới thiệu hôm nay đã được việt hoá bởi một nhà phát triển lừng danh đó là Nothing1010. Nên bạn hoàn toàn yên tâm sẽ không còn phần chèn link website quảng cáo từ nhà sản xuất vào trình duyệt nữa vì bởi tác giả đã lượt bỏ đi hoàn toàn."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2016/09/Wandrv-6.6.jpg"
+  },
+  {
+    "type": "title",
+    "value": "Tính năng của Wandriver 6.6"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Sử dụng ít tài nguyên phần cứng máy tính như CPU hoặc Ram.",
+      "Tự động cài đặt và trích xuất driver phù hợp một cách hiệu quả.",
+      "Cung cấp các bộ Driver phù hợp cho phiên bản Windows 32bit hoặc 64bit",
+      "Cập nhật các driver mới nhất cho máy tính",
+      "Tương thích với hệ điều hành Windows XP, Windows 7 hoặc Windows 10",
+      "Hổ trợ sử dụng ngôn ngữ Tiếng Việt và Tiếng Anh"
+    ]
+  }
+]', 1, 12121, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Dism++ 10.1.1002.1 – Quản Lý, Tối Ưu Hệ Thống Máy Tính', '[
+  {
+    "type": "title",
+    "value": "Giới Thiệu"
+  },
+  {
+    "type": "text",
+    "value": "Dism++ – tiện ích được thiết kế dành cho người dùng máy tính cao cấp, sẽ giúp thực hiện dọn rác máy tính nhanh chóng. Với nó, bạn có thể làm sạch hệ thống các tập tin tạm thời, xóa các bản ghi, bộ đệm,… Trong số những tính năng khác, bạn có thể gỡ bỏ các trình điều khiển hệ thống lỗi thời, dọn sạch thư mục cập nhật, các bản sao cũ của các ứng dụng Metro, loại bỏ các ứng dụng Metro không cần thiết, v.v."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/05/Dism.png?v=1652800324"
+  },
+  {
+    "type": "text",
+    "value": "Dism++ sở hữu nhiều tính năng thú vị hơn là chỉ là một tiện ích tạo và quản lý tập tin trên máy tính. Trong thực tế, Dism++ gồm một nhóm các công cụ phức tạp cung cấp các tính năng dọn dẹp và tối ưu hóa hệ thống, tăng tốc máy tính, quản lý các mục khởi động, trình điều khiển, các bản cập nhật và chức năng của Windows, và xử lý các tập tin hình ảnh của Windows."
+  },
+  {
+    "type": "title",
+    "value": "Những đặc điểm chính"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Bằng phương tiện Dism ++, bạn có thể dọn dẹp hệ điều hành từ các tập tin “rác” và tạm thời, bao gồm cả bộ đệm và nhật ký.",
+      "Để thực hiện việc này, chọn “Công cụ” – “Vệ sinh” trong menu chính ở bên trái và bắt đầu quét hệ thống. Ngoài ra, người dùng có thể chọn tùy chọn làm sạch: “nhanh” hoặc “sâu”.",
+      "Nhờ Dism ++ nó được đề xuất để nén hệ điều hành đã cài đặt. Lưu ý rằng người dùng chọn phần trăm nén.",
+      "Nhanh chóng loại bỏ các trình điều khiển và ứng dụng lỗi thời."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Các tính năng chính của Dism++"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Sao lưu phần vùng",
+      "Sao lưu bản quyền Windows và Office.",
+      "Convert ESD to ISO nhanh chóng.",
+      "Xóa và tối ưu hóa hệ thống.",
+      "Xử lý tập tin hình ảnh.",
+      "Quản lý các mục khởi động, cập nhật và chức năng của Windows.",
+      "Truy hồi thông tin dữ liệu.",
+      "Tích hợp nhiều công cụ phức tạp."
+    ]
+  }
+]', 1, 87411, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('StartAllBack – Tuỳ Biến Start Menu, Taskbar Cho Windows 11', '[
+  {
+    "type": "title",
+    "value": "StartAllBack là gì ?"
+  },
+  {
+    "type": "text",
+    "value": "StartAllBack là một công cụ giúp bạn tuỳ chỉnh lại Start Menu, Taskbar, Menu chuột phải của Windows 11 về Windows 10, thêm vào đó là rất nhiều tính năng với tuỳ biến khác."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/10/StartAllBack1.png?v=1649162910"
+  },
+  {
+    "type": "title",
+    "value": "Các tính năng của StartAllBack"
+  },
+  {
+    "type": "text",
+    "value": "Kể từ version 3.2.1, StartAllBack hỗ trợ thu nhỏ nhưng vẫn giữ nguyên vị trí Start ở giữa như mặc định."
+  },
+  {
+    "type": "title",
+    "value": "Khôi phục và cải thiện Taskbar"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Điều chỉnh kích thước, màu sắc thanh Taskbar (trong suốt, mờ,…).",
+      "Điều chỉnh vị trí shortcut trên Taskbar ra chính giữa hoặc lệch về bên trái.",
+      "Di chuyển thanh Taskbar lên trên cùng, cạnh trái hoặc phải.",
+      "Kéo và thả shortcut vào thanh Taskbar."
+    ]
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/10/StartAllBack-1536x810.png?v=1635695231"
+  }
+]', 1, 51881, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Download Office 2021 Pro VL + Hướng Dẫn Cài Đặt', '[
+  {
+    "type": "title",
+    "value": "Giới thiệu về Office 2021"
+  },
+  {
+    "type": "text",
+    "value": "Office 2021 Pro là phiên bản mới nhất của bộ ứng dụng văn phòng, được cải tiến từ phiên bản Office 2019. Bên cạnh những tính năng tuyệt vời từ phiên bản trước, Office 2021 đã tích hợp thêm công nghệ đám mây để tăng năng suất, hiệu quả cho công việc. Cũng chính vì lý do này mà Office 2021 được mệnh danh là ông hoàng năng suất. Mang đến một trải nghiệm hoàn hảo cho người sử dụng."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/10/Office2021-750x430.png"
+  },
+  {
+    "type": "title",
+    "value": "Các ứng dụng có trong Office 2021"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Microsoft Outlook",
+      "Microsoft PowerPoint",
+      "Microsoft Publisher",
+      "Microsoft Word",
+      "Skype for business",
+      "OneDrive for business"
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Office 2021 Pro"
+  },
+  {
+    "type": "text",
+    "value": "Bộ cài đặt Ofice 2021 này đã được Lê Hà Blog chỉnh sửa cài đặt thông qua công cụ deployment tool của Microsoft. Điểm khác biệt với bản gốc là có thể lựa chọn phù hợp nhu cầu sử dụng và đảm bảo nguyên gốc từ Microsoft."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/10/Office.2021.png"
+  },
+  {
+    "type": "title",
+    "value": "Download Office 2021 Pro"
+  }
+]', 1, 78941, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Download Office 2013 Pro VL + Hướng Dẫn Cài Đặt', '[
+  {
+    "type": "title",
+    "value": "Giới thiệu về Office 2013"
+  },
+  {
+    "type": "text",
+    "value": "Office 2013 Pro là một phiên bản trong bộ Office và ứng dụng văn phòng bao gồm Word, Excel, Powerpoint, Outlook, Access, OneNote, Publisher, Lync and Info Path 2013."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/07/office-2013.jpg?v=1625883560"
+  },
+  {
+    "type": "title",
+    "value": "Các ứng dụng có trong Office 2013"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Giao diện phẳng mới phong cách Modern UI",
+      "Microsoft PowerPoint",
+      "Thêm các loại font mới đa dạng hơn, hỗ trợ 40 ngôn ngữ của nhiều quốc gia.",
+      "Microsoft Word",
+      "Skype for business",
+      "OneDrive for business"
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Download Office 2013 Pro"
+  }
+]', 1, 46611, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Update Control 2.0 – Công Cụ Tắt Update Trên Windows 10/11', '[
+  {
+    "type": "title",
+    "value": "Giới thiệu"
+  },
+  {
+    "type": "text",
+    "value": "Update Control 2.0 là công cụ có chức năng tắt mở nhanh Windows Update của Windows 10/11. Mặc định Windows Update sẽ bật và khi có bản update mới sẽ tự động update cài đặt các bản vá và driver cho hệ điều hành. Với Windows 10/11 bạn không thể chọn tắt Windows Update và khi update có trường hợp bị treo và mất rất nhiều thời gian restart để hoàn tất quá trình update. Công cụ dưới đây sẽ giúp các bạn tắt hoặc mở lại Windows Update nhanh nhất."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2021/02/update.control.2.0.png?v=1649162960"
+  }
+]', 1, 46611, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Defender Control 2.1 – Vô Hiệu Hóa Windows Defender', '[
+  {
+    "type": "title",
+    "value": "Defender Control là gì ?"
+  },
+  {
+    "type": "text",
+    "value": "Defender Control 2.1 là công cụ cực kì hữu ích giúp bạn Bật/Tắt Windows Defender trên Windows một cách dễ dàng. Nó có thể vô hiệu hoá Windows Defender nếu như bạn không cần nó nữa. Hoặc cũng có sử dụng công cụ này để tắt tạm thời Windows Defender và một lúc sau có thể mở lại Defender như bình thường."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2020/05/Defender.Control.png"
+  },
+  {
+    "type": "title",
+    "value": "Điểm Mới Trên Defender Control 2.1"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Đã xóa hỗ trợ tham số cmd (Điều khiển Bộ bảo vệ đang sử dụng bên trong một số phần mềm độc hại)",
+      "Đã sửa điều khiển Bộ bảo vệ Không hoạt động trên Windows 11",
+      "Đã sửa lỗi xảy ra khi tắt Bộ bảo vệ Windows",
+      "Đã thêm một số cải tiến về mã"
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Tính năng chính"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Trong quá trình sao chép dữ liệu lớn từ PC sang Usb hoặc ngược lại, việc vô hiệu hóa Windows defender có thể làm giảm thời gian Sao chép tổng số",
+      "Người dùng có thể gặp phải xung đột giữa Defender và ứng dụng chống vi-rút của họ",
+      "Một số chương trình chống vi-rút yêu cầu người dùng tắt hoặc tắt thủ công Windows Defender trong Windows 10…",
+      "Windows Defender sẽ khởi động mỗi lần bạn khởi động máy tính. Nếu bạn cảm thấy máy tính chậm chạm thì nên tắt nó."
+    ]
+  }
+]', 1, 6611, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('NET Framework All In One 1.1 – 6.0.6 Offline', '[
+  {
+    "type": "title",
+    "value": "Giới thiệu"
+  },
+  {
+    "type": "text",
+    "value": "NET Framework là thành phần không thể thiếu đối với người dùng Windows. Bởi vì, khi chúng ta cài đặt bất kỳ một phần mềm nào đó mà thiếu một trong các phiên bản Framework do người lập trình tạo ra. Thì đồng nghĩa với việc chúng ta sẽ không thể cài đặt được phần mềm đó. Nên tại bài viết này mình sẽ gửi đến bạn link Tải shoppingmode Microsoft NET Framework All in One mới nhất. Tất cả các phiên bản Framework được tích hợp trong 1 bộ cài, rất tiện lợi cho những bạn muốn giảm thời gian tải về & cài đặt."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2018/01/NET-Framework.jpg"
+  },
+  {
+    "type": "title",
+    "value": "NET Framework All In One gồm các phiên bản"
+  },
+  {
+    "type": "list",
+    "value": [
+      "Microsoft .NET Framework 4.0",
+      "Microsoft .NET Framework 4.5.2",
+      "Microsoft .NET Framework 4.6",
+      "Microsoft .NET Framework 4.7",
+      "Microsoft .NET Framework 4.8",
+      "Microsoft .NET Framework 5.0.1",
+      "Microsoft .NET Framework 6.0.6"
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Công cụ hỗ trợ gồm"
+  },
+  {
+    "type": "list",
+    "value": [
+      ".NET Framework Cleanup Tool là tiện ích để loại bỏ, xoá bỏ phiên bản .NET Framework khỏi máy tính của bạn",
+      ".NET Framework Setup Vertification Utility là một tiện ích để kiểm tra tính chính xác và hoạt động của việc cài đặt Net Flamework.",
+      ".NET Framework Repair Tool được thiết kế để khắc phục sự cố khi cài đặt hoặc cập nhật",
+      "NET Framework. Công cụ này cố gắng giải quyết các vấn đề bằng cách áp dụng các bản sửa lỗi đã biết hoặc bằng cách khôi phục các phiên bản đã cài đặt. Chương trình hỗ trợ .NET Framework đầy đủ các phiên bản."
+    ]
+  },
+  {
+    "type": "title",
+    "value": "Tải về NET Framework All in One"
+  }
+]', 1, 8899, CURRENT_TIMESTAMP);
+INSERT INTO Software(title, content, authorId, amountView, createDate)
+VALUES ('Thay Đổi Ngày Hết Hạn Mật Khẩu Trong Windows 10/11', '[
+  {
+    "type": "title",
+    "value": "Giới thiệu"
+  },
+  {
+    "type": "text",
+    "value": "Thay đổi Password thường xuyên là một trong những việc bạn cần làm để bảo mật tài khoản. shoppingmode Microsoft đã tích hợp tính năng đặt “tuổi thọ” cho Password từ rất lâu. Nếu đến thời điểm ngày hết hạn Password, bạn phải đổi sang Password mới. Bài viết này sẽ hướng dẫn bạn đặt ngày hết hạn cho mật khẩu của Windows đơn giản nhất."
+  },
+  {
+    "type": "text",
+    "value": "Tùy thuộc vào việc bạn đang sử dụng tài khoản cục bộ hay tài khoản shoppingmode Microsoft để đăng nhập vào PC mà các bước thực hiện sẽ khác nhau."
+  },
+  {
+    "type": "title",
+    "value": "Đặt thời hạn mật khẩu tối đa qua Windows PowerShell"
+  },
+  {
+    "type": "text",
+    "value": "Nếu bạn sử dụng tài khoản local trên PC chứ không phải tài khoản Microsoft, bạn vẫn có thể đặt ngày hết hạn cho mật khẩu của mình."
+  },
+  {
+    "type": "text",
+    "value": "Để bắt đầu, bấm chuột phải vào menu Start, sau đó nhấp vào Windows PowerShell (Admin) hoặc Command Prompt (Admin), tùy thuộc vào phiên bản Windows của bạn."
+  },
+  {
+    "type": "text",
+    "value": "Trong cửa sổ PowerShell, nhập net accounts để tìm thời hạn mật khẩu tối đa hiện có cho tài khoản."
+  },
+  {
+    "type": "image",
+    "url": "https://lehait.net/wp-content/uploads/2022/05/maxagepw.png"
+  },
+  {
+    "type": "text",
+    "value": "Nếu bạn muốn thay đổi con số 42 ngày mặc định, hãy nhập net accounts /maxpwage:xx và thay thế xx là ngày bạn muốn sử dụng. Bạn có thể thay đổi ngày không giới hạn bằng cách nhập net accounts /maxpwage:unlimited"
+  },
+  {
+    "type": "text",
+    "value": "Như vậy đã có thể thay đổi thời hạn thay đổi mật khẩu trên tài khoản local của Windows."
+  }
+]', 1, 9133, CURRENT_TIMESTAMP);
 
-INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (1, 8);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (1, 9);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (2, 9);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (3, 9);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (4, 9);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (5, 9);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (6, 9);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (7, 9);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (8, 9);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (9, 9);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (10, 10);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (11, 10);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (12, 10);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (13, 10);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (14, 10);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (15, 10);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (16, 7);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (17, 7);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (18, 7);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (19, 7);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (20, 7);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (21, 7);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (22, 7);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (23, 5);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (24, 5);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (25, 4);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (26, 4);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (27, 4);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (28, 13);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (29, 12);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (30, 11);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (31, 13);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (32, 15);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (33, 15);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (34, 16);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (35, 16);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (36, 15);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (37, 15);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (38, 14);
+INSERT INTO SoftwareCategory(softwareId, childCategoryId) VALUES (39, 19);
 
-INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('mình xin cách hiện tại biểu tượng mũi tên của Shortcut và mình không tải được Paint 3D trên Store vs AD', 4, 1, CURRENT_DATE);
-INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('chào bro. bạn ghost rất tốt nhưng có điều mình ko thể kích hoạt offcie đc', 3, 1, CURRENT_DATE);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('mình xin cách hiện tại biểu tượng mũi tên của Shortcut và mình không tải được Paint 3D trên Store vs AD', 4, 1, CURRENT_TIMESTAMP);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('chào bro. bạn ghost rất tốt nhưng có điều mình ko thể kích hoạt offcie đc', 3, 1, CURRENT_TIMESTAMP);
 INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Ad cho mình hỏi bản này đã tich hợp winrar vào menu chuột phải chưa nhỉ, bản trước mình ko thấy có
-Thank alll', 6, 1, CURRENT_DATE);
-INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Không mở được xbox game bar bạn ơi', 5, 1, CURRENT_DATE);
-INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Bạn sử dụng WindowsShortcutArrowEditor, các app vẫn tải và sử dụng bình thường mà bạn.', 1, 1, CURRENT_DATE);
-INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Bạn dùng tool active trong C:\Extra là được.', 2, 1, CURRENT_DATE);
+Thank alll', 6, 1, CURRENT_TIMESTAMP);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Không mở được xbox game bar bạn ơi', 5, 1, CURRENT_TIMESTAMP);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Bạn sử dụng WindowsShortcutArrowEditor, các app vẫn tải và sử dụng bình thường mà bạn.', 1, 1, CURRENT_TIMESTAMP);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Bạn dùng tool active trong C:\Extra là được.', 2, 1, CURRENT_TIMESTAMP);
 INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Bản ghost của Admin làm xài ổn định, mượt cài 3-4 máy ở nhà xài phà phà
 Mình tải bản ghost iso về cài máy chỉ hiện bản Home SL ko thấy bản Pro
 Admin xem lại
-Cám ơn Admin đã làm những bản ghost chất lượng', 7, 1, CURRENT_DATE);
-INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Bạn tải file iso lâu chưa, mình mới update lại file iso gần đây không biết còn gặp tình trạng này nữa không.', 2, 1, CURRENT_DATE);
-INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Mình mới tải ngày 9/11 để cài lại win cho con asus', 7, 1, CURRENT_DATE);
-INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Bản đó là mình đã update lại rồi bạn ạ.', 2, 1, CURRENT_DATE);
-INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Em tải 2 ngày trước bản Iso vẫn k có bản Pro admin.', 7, 1, CURRENT_DATE);
-INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Mình sẽ kiểm tra thêm nha.', 2, 1, CURRENT_DATE);
+Cám ơn Admin đã làm những bản ghost chất lượng', 7, 1, CURRENT_TIMESTAMP);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Bạn tải file iso lâu chưa, mình mới update lại file iso gần đây không biết còn gặp tình trạng này nữa không.', 2, 1, CURRENT_TIMESTAMP);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Mình mới tải ngày 9/11 để cài lại win cho con asus', 7, 1, CURRENT_TIMESTAMP);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Bản đó là mình đã update lại rồi bạn ạ.', 2, 1, CURRENT_TIMESTAMP);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Em tải 2 ngày trước bản Iso vẫn k có bản Pro admin.', 7, 1, CURRENT_TIMESTAMP);
+INSERT INTO Comments(content, commenterId, softwareId, createDate) VALUES ('Mình sẽ kiểm tra thêm nha.', 2, 1, CURRENT_TIMESTAMP);
 
 INSERT INTO ReplyComment(commentId, replyCommentId) VALUES (1, 5);
 INSERT INTO ReplyComment(commentId, replyCommentId) VALUES (2, 6);

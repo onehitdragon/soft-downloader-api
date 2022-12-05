@@ -1,5 +1,7 @@
 package com.example.softdownloaderapi.repository;
 
+import java.util.List;
+
 import javax.persistence.NoResultException;
 
 import org.hibernate.Session;
@@ -15,6 +17,50 @@ import com.example.softdownloaderapi.model.Soft;
 public class SoftRepository {
     @Autowired
     private SessionFactory sessionFactory;
+
+    public List<Soft> getHighestViewingSoft(int amount){
+        Session session = sessionFactory.openSession();
+        
+        String queryStr = "SELECT * FROM software ORDER BY amountView DESC LIMIT " + amount;
+        Query<Soft> query = session.createNativeQuery(queryStr, Soft.class);
+        List<Soft> result = query.list();
+        session.close();
+
+        return result;
+    }
+
+    public List<Soft> getNewestViewingSoft(int amount){
+        Session session = sessionFactory.openSession();
+        
+        String queryStr = "SELECT * FROM software ORDER BY createDate DESC LIMIT " + amount;
+        Query<Soft> query = session.createNativeQuery(queryStr, Soft.class);
+        List<Soft> result = query.list();
+        session.close();
+
+        return result;
+    }
+
+    public List<Soft> getByParentCategorySoft(int parentCategoryId){
+        Session session = sessionFactory.openSession();
+        
+        String queryStr = "SELECT * FROM softwarecategory JOIN childcategory ON softwarecategory.childCategoryId = childcategory.id JOIN software ON software.id = softwarecategory.softwareId WHERE childcategory.parentCategoryId = " + parentCategoryId;
+        Query<Soft> query = session.createNativeQuery(queryStr, Soft.class);
+        List<Soft> result = query.list();
+        session.close();
+
+        return result;
+    }
+
+    public List<Soft> getByChildCategorySoft(int childCategoryId){
+        Session session = sessionFactory.openSession();
+        
+        String queryStr = "SELECT * FROM softwarecategory JOIN software ON softwarecategory.softwareId = software.id WHERE softwarecategory.childCategoryId = " + childCategoryId;
+        Query<Soft> query = session.createNativeQuery(queryStr, Soft.class);
+        List<Soft> result = query.list();
+        session.close();
+
+        return result;
+    }
 
     public Soft getSoft(int id){
         Session session = sessionFactory.openSession();

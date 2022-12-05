@@ -8,6 +8,7 @@ import com.example.softdownloaderapi.model.User;
 import com.example.softdownloaderapi.repository.SoftRepository;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
@@ -26,6 +27,26 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class SoftController {
     @Autowired
     private SoftRepository softRepository;
+
+    @GetMapping("/gethightestviewing")
+    public List<Soft> getHightestViewing(Integer amount){
+        return softRepository.getHighestViewingSoft(amount);
+    }
+    
+    @GetMapping("/getnewestviewing")
+    public List<Soft> getNewestViewing(Integer amount){
+        return softRepository.getNewestViewingSoft(amount);
+    }
+
+    @GetMapping("/getbyparentcategory")
+    public List<Soft> getByParentCategory(Integer parentCategoryId){
+        return softRepository.getByParentCategorySoft(parentCategoryId);
+    }
+
+    @GetMapping("/getbychildcategory")
+    public List<Soft> getByChildCategory(Integer childCategoryId){
+        return softRepository.getByChildCategorySoft(childCategoryId);
+    }
 
     @GetMapping("/{idSoft}")
     public Soft getSoft(@PathVariable(value = "idSoft") Integer id){
