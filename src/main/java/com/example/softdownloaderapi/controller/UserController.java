@@ -2,7 +2,6 @@ package com.example.softdownloaderapi.controller;
 
 import javax.validation.constraints.NotBlank;
 
-import javax.validation.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.softdownloaderapi.model.CheckingUserResult;
-import com.example.softdownloaderapi.model.ErrorValidateMessage;
 import com.example.softdownloaderapi.model.ResponseMessage;
 import com.example.softdownloaderapi.model.User;
 import com.example.softdownloaderapi.model.Role;
@@ -44,6 +42,6 @@ public class UserController {
         if(userResult.isResult()){
             return new ResponseEntity<ResponseMessage>(new ResponseMessage("error", "username is exist"), HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity<ResponseMessage>(new ResponseMessage("success"), HttpStatus.OK);
+        return new ResponseEntity<ResponseMessage>(new ResponseMessage("success", ""), HttpStatus.OK);
     }
 }

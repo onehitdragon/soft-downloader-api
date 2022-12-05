@@ -21,6 +21,7 @@ CREATE TABLE ParentCategory(
 CREATE TABLE ChildCategory(
 	id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255),
+    iconUrl VARCHAR(255),
     parentCategoryId INT,
     FOREIGN KEY (parentCategoryId) REFERENCES ParentCategory (id)
 );
@@ -76,23 +77,25 @@ INSERT INTO ParentCategory(name) VALUES ('Driver');
 INSERT INTO ParentCategory(name) VALUES ('Phần mềm');
 INSERT INTO ParentCategory(name) VALUES ('Thủ thuật');
 
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Window 7', 1);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Window 8', 1);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Window 10', 1);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Window 11', 1);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Ghost Window XP', 2);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Ghost Window 7', 2);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Ghost Window 8', 2);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Ghost Window 10', 2);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Ghost Window 11', 2);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Network Driver', 3);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Office Driver', 3);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Software Driver', 3);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Lập trình', 4);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Office', 4);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Gõ tiếng việt', 4);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Đồ hoạ', 4);
-INSERT INTO ChildCategory(name, parentCategoryId) VALUES ('Máy tính', 5);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Window XP', '/images/category/windowsxp.png', 1);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Window 7', '/images/category/windows7.png', 1);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Window 8', '/images/category/windows8.png', 1);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Window 10', '/images/category/windows10.png', 1);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Window 11', '/images/category/windows11.png', 1);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Ghost Window XP', '/images/category/ghost.png', 2);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Ghost Window 7', '/images/category/ghost.png', 2);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Ghost Window 8', '/images/category/ghost.png', 2);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Ghost Window 10', '/images/category/ghost.png', 2);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Ghost Window 11', '/images/category/ghost.png', 2);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Network Driver', '/images/category/network-drivers.png', 3);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Office Driver', '/images/category/bus-driver.png', 3);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Software Driver', '/images/category/soft-drivers.png', 3);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Lập trình', '/images/category/coding-language.png', 4);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Database', '/images/category/database.png', 4);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Office', '/images/category/office.png', 4);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Gõ tiếng việt', '/images/category/typing.png', 4);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Đồ hoạ', '/images/category/illustrator.png', 4);
+INSERT INTO ChildCategory(name, iconUrl, parentCategoryId) VALUES ('Máy tính', '/images/category/hacker.png', 5);
 
 INSERT INTO Software(title, content, authorId, amountView, createDate)
 VALUES ('Ghost Win 10 22H2 Home SL & Pro – No & Full Soft, Update October 2022', '[

@@ -12,6 +12,8 @@ public class ChildCategory {
     private int id;
     @Column
     private String name;
+    @Column
+    private String iconUrl;
     @ManyToOne
     @JoinColumn(name = "parentcategoryid")
     private ParentCategory parentCategory;
@@ -27,5 +29,11 @@ public class ChildCategory {
     }
     public void setName(String name) {
         this.name = name;
+    }
+    public String getIconUrl() {
+        return iconUrl;
+    }
+    public void setIconUrl(String iconUrl) {
+        this.iconUrl = iconUrl;
     }
 }
