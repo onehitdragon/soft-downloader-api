@@ -1,14 +1,18 @@
 package com.example.softdownloaderapi.model;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity(name = "software")
 public class Soft {
@@ -27,6 +31,11 @@ public class Soft {
     private int amountView;
     @Column
     private Date createDate;
+    @OneToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "softwarecategory", 
+        joinColumns = { @JoinColumn(name = "softwareId") }, 
+        inverseJoinColumns = {@JoinColumn(name = "childCategoryId") })
+    private List<ChildCategory> childCategories;
 
     public int getId() {
         return id;
@@ -63,6 +72,12 @@ public class Soft {
     }
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
+    }
+    public List<ChildCategory> getChildCategories() {
+        return childCategories;
+    }
+    public void setChildCategories(List<ChildCategory> childCategories) {
+        this.childCategories = childCategories;
     }
     
 }

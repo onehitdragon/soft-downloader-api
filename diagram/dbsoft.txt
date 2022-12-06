@@ -63,7 +63,7 @@ CREATE TABLE ReplyComment(
 INSERT INTO Role(name) VALUES ("Admin");
 INSERT INTO Role(name) VALUES ("User");
 
-INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('admin', '12345', 'Nguyễn Văn Admin', CURRENT_TIMESTAMP, 1);
+INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('admin', '12345', 'Admin', CURRENT_TIMESTAMP, 1);
 INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('vinh', '12345', 'Nguyễn Văn V', CURRENT_TIMESTAMP, 1);
 INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('A', '12345', 'Nguyễn Văn A', CURRENT_TIMESTAMP, 2);
 INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('B', '12345', 'Nguyễn Văn B', CURRENT_TIMESTAMP, 2);
