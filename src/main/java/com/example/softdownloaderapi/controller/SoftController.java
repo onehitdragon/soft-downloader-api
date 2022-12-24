@@ -74,4 +74,9 @@ public class SoftController {
     public void deleteSoft(@PathVariable(value = "idSoft") @Min(1) String id){
         softRepository.delete(Integer.parseInt(id));
     }
+
+    @GetMapping("/search")
+    public List<Soft> searchSoft(@NotBlank String keyword){
+        return softRepository.search(keyword);
+    }
 }

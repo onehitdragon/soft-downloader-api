@@ -97,4 +97,15 @@ public class SoftRepository {
         transaction.commit();
         session.close();
     }
+
+    public List<Soft> search(String keyword){
+        Session session = sessionFactory.openSession();
+
+        String queryStr = "SELECT * FROM software WHERE title LIKE '%"+ keyword +"%'";
+        Query<Soft> query = session.createNativeQuery(queryStr, Soft.class);
+        List<Soft> result = query.list();
+        session.close();
+
+        return result;
+    }
 }
