@@ -3,6 +3,7 @@ package com.example.softdownloaderapi.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.softdownloaderapi.model.ResponseMessage;
 import com.example.softdownloaderapi.model.Soft;
 import com.example.softdownloaderapi.model.User;
 import com.example.softdownloaderapi.repository.SoftRepository;
@@ -14,16 +15,17 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.annotation.Validated;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 
 
 @RestController
 @RequestMapping("/soft")
-@Validated
 public class SoftController {
     @Autowired
     private SoftRepository softRepository;
@@ -71,12 +73,19 @@ public class SoftController {
     }
 
     @DeleteMapping("/{idSoft}")
-    public void deleteSoft(@PathVariable(value = "idSoft") @Min(1) String id){
-        softRepository.delete(Integer.parseInt(id));
+    public void deleteSoft(@PathVariable(value = "idSoft")@NotBlank @Min(1) Integer id){
+        softRepository.delete(id);
     }
 
     @GetMapping("/search")
     public List<Soft> searchSoft(@NotBlank String keyword){
         return softRepository.search(keyword);
+    }
+
+    @PutMapping("/addViewingSoft/{idSoft}")
+    public ResponseEntity<ResponseMessage> addViewingSoft(@PathVariable(value = "idSoft")@NotBlank @Min(1) Integer id){
+        softRepository.addViewing(id);
+
+        return new ResponseEntity<ResponseMessage>(new ResponseMessage("success", ""), HttpStatus.OK);
     }
 }

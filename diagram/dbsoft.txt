@@ -120,23 +120,23 @@ VALUES ('Ghost Win 10 22H2 Home SL & Pro – No & Full Soft, Update October 2022
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win10.22H2.png?v=1666503928"
+    "url": "/images/soft/0.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win10.22H2.FullSoft.png?v=1666503923"
+    "url": "/images/soft/1.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win10.Oct_.2022.png?v=1666503931"
+    "url": "/images/soft/2.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Win10.22H2.Oct_.2022.png"
+    "url": "/images/soft/3.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Win10.22H2.AIO_.png?v=1666503933"
+    "url": "/images/soft/4.png"
   },
   {
     "type": "title",
@@ -189,23 +189,23 @@ VALUES ('Ghost Win 10 LTSC 21H2 – No & Full Soft, Update December 2021', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/12/Win10.LTSC_.21H2.png?v=1649162903"
+    "url": "/images/soft/5.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/12/Win10.LTSC_.21H2.x64.png?v=1638541831"
+    "url": "/images/soft/6.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/12/Win10.LTSC_.21H2.FullSoft.png?v=1638541796"
+    "url": "/images/soft/7.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Win10.22H2.Oct_.2022.png"
+    "url": "/images/soft/8.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Win10.22H2.AIO_.png?v=1666503933"
+    "url": "/images/soft/9.png"
   },
   {
     "type": "title",
@@ -258,23 +258,23 @@ VALUES ('Ghost Win 10 21H2 – No & Full Soft, Update April 2022', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win10.21H2.April_.2022.png?v=1649481838"
+    "url": "/images/soft/10.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win10.21H2.April_.png?v=1649481842"
+    "url": "/images/soft/11.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win10.21H2.April_.2022.Full_.Soft_.png?v=1649481834"
+    "url": "/images/soft/12.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win10.21H2.1620.png"
+    "url": "/images/soft/13.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win10.21H2.Office.png?v=1649481844"
+    "url": "/images/soft/14.png"
   },
   {
     "type": "title",
@@ -327,23 +327,23 @@ VALUES ('Ghost Win 10 Lite 21H2 – No & Full Soft – Nhanh, Mượt, Nhẹ 202
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/02/Ghost.Win10.Lite_.png?v=1649162894"
+    "url": "/images/soft/15.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/02/Ghost.Win10.Lite_.2022.png?v=1644121155"
+    "url": "/images/soft/16.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/02/Ghost.Win10.Lite_.Fast_.png"
+    "url": "/images/soft/17.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/02/Ghost.Win10.Lite_.FullSoft.png"
+    "url": "/images/soft/18.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/02/Ghost.Win10.Lite_.x64.png?v=1644121164"
+    "url": "/images/soft/19.png"
   },
   {
     "type": "title",
@@ -396,23 +396,23 @@ VALUES ('Ghost Win 10 Home SL 21H2 – No & Full Soft, Update January 2022', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/01/Ghost-Win-10-Home.png?v=1649162897"
+    "url": "/images/soft/20.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/01/Ghost-Win-10-Home-SL.png?v=1642823572"
+    "url": "/images/soft/21.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/01/Win-10-Home-SL.png?v=1642823580"
+    "url": "/images/soft/22.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/01/Ghost-Win-10-Home-Full-Soft.png?v=1642823567"
+    "url": "/images/soft/23.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/01/Ghost-Win-10-Home-21H2.png"
+    "url": "/images/soft/24.png"
   },
   {
     "type": "title",
@@ -465,23 +465,23 @@ VALUES ('Ghost Win 10 LTSC 21H2 – No & Full Soft, Update December 2021', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/01/Ghost-Win-10-Home.png?v=1649162897"
+    "url": "/images/soft/25.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/12/Win10.LTSC_.21H2.png?v=1649162903"
+    "url": "/images/soft/26.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/12/Win10.LTSC_.21H2.FullSoft.png?v=1638541796"
+    "url": "/images/soft/27.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/12/Win10.LTSC_.2021.png"
+    "url": "/images/soft/28.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/01/Ghost-Win-10-Home-21H2.png"
+    "url": "/images/soft/29.png"
   },
   {
     "type": "title",
@@ -534,23 +534,23 @@ VALUES ('Ghost Win 10 21H1- No & Full Soft, Bamboo Sep 2021', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.jpg?v=1649162923"
+    "url": "/images/soft/30.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.21H1.Bamboo.jpg?v=1632585005"
+    "url": "/images/soft/31.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.fs_.jpg?v=1632585013"
+    "url": "/images/soft/32.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.full_.png"
+    "url": "/images/soft/33.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.version.png"
+    "url": "/images/soft/34.png"
   },
   {
     "type": "title",
@@ -603,23 +603,23 @@ VALUES ('Ghost Win 10 20H2 – No & Full Soft, Update February 2021', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/02/Win-10-20H2.jpg?v=1614501033"
+    "url": "/images/soft/35.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/02/Ghost-Win-10-20H2-1.jpg?v=1649162933"
+    "url": "/images/soft/36.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.fs_.jpg?v=1632585013"
+    "url": "/images/soft/37.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.full_.png"
+    "url": "/images/soft/38.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.version.png"
+    "url": "/images/soft/39.png"
   },
   {
     "type": "title",
@@ -672,23 +672,23 @@ VALUES ('Ghost Win 10 2004 20H1 – No & Full Soft, Update May 2020', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2020/05/Win-10-2004.jpg?v=1649162938"
+    "url": "/images/soft/40.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2020/05/Ghost-Win-10-2004.jpg?v=1590826994"
+    "url": "/images/soft/41.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.fs_.jpg?v=1632585013"
+    "url": "/images/soft/42.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.full_.png"
+    "url": "/images/soft/43.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/08/Ghost.Win10.Bamboo.version.png"
+    "url": "/images/soft/44.png"
   },
   {
     "type": "title",
@@ -741,19 +741,19 @@ VALUES ('Ghost Win 11 Lite 22H2 – No & Full Soft, October 2022', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Win11.Lite_.22H2.png?v=1666158112"
+    "url": "/images/soft/45.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Win11.Lite_.FullSoft.png?v=1666158114"
+    "url": "/images/soft/46.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Win11.Lite_.O2021.png?v=1666158117"
+    "url": "/images/soft/47.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win11.Lite_.22H2.png"
+    "url": "/images/soft/48.png"
   },
   {
     "type": "title",
@@ -806,23 +806,23 @@ VALUES ('Ghost Win 11 22H2 – No & Full Soft, September 2022', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/09/Ghost.Win11.22H2.png?v=1664017085"
+    "url": "/images/soft/49.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/09/Win11.22H2.png?v=1664017093"
+    "url": "/images/soft/50.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/09/Win11.22H2.FS_.png?v=1664074755"
+    "url": "/images/soft/51.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/09/Win11.22H2.Office.png?v=1664017089"
+    "url": "/images/soft/52.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win11.Lite_.22H2.png"
+    "url": "/images/soft/53.png"
   },
   {
     "type": "title",
@@ -875,23 +875,23 @@ VALUES ('Ghost Win 11 21H2 – No & Full Soft October 2021', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/10/Win11.21H2.png?v=1649162915"
+    "url": "/images/soft/54.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/10/Ghost.Win11.21H2.png?v=1633768397"
+    "url": "/images/soft/55.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/10/Ghost.Win11.Full_.Soft_.png?v=1633768399"
+    "url": "/images/soft/56.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/10/Win11.Office2021.png?v=1633768414"
+    "url": "/images/soft/57.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win11.Lite_.22H2.png"
+    "url": "/images/soft/58.png"
   },
   {
     "type": "title",
@@ -944,23 +944,23 @@ VALUES ('Ghost Win 11 Pro Insider – No & Full Soft (Build 22000.168)', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/09/Win11.Pro_.Autumn-1536x839.jpg?v=1649162919"
+    "url": "/images/soft/59.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/09/Ghost.Win11.Pro_-1536x839.jpg?v=1630502040"
+    "url": "/images/soft/60.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/09/Ghost.Win11.FullSoft.jpg"
+    "url": "/images/soft/61.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/10/Win11.Office2021.png?v=1633768414"
+    "url": "/images/soft/62.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win11.Lite_.22H2.png"
+    "url": "/images/soft/63.png"
   },
   {
     "type": "title",
@@ -1013,23 +1013,23 @@ VALUES ('Ghost Win 11 Pro Insider Preview – No Soft (Build 22000.100)', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/07/Ghost.Win_.11.jpg?v=1649162924"
+    "url": "/images/soft/64.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/07/Win.11.Pro_.jpg?v=1627035188"
+    "url": "/images/soft/65.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/09/Ghost.Win11.FullSoft.jpg"
+    "url": "/images/soft/66.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/10/Win11.Office2021.png?v=1633768414"
+    "url": "/images/soft/67.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win11.Lite_.22H2.png"
+    "url": "/images/soft/68.png"
   },
   {
     "type": "title",
@@ -1082,23 +1082,23 @@ VALUES ('Ghost Win 11 Pro – No & Full Soft, Bamboo December 2021', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/12/Win11.Pro_.Bamboo.png?v=1649162900"
+    "url": "/images/soft/69.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/12/Ghost.Win11.Pro_.png?v=1639840039"
+    "url": "/images/soft/70.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/09/Ghost.Win11.FullSoft.jpg"
+    "url": "/images/soft/71.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/10/Win11.Office2021.png?v=1633768414"
+    "url": "/images/soft/72.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Ghost.Win11.Lite_.22H2.png"
+    "url": "/images/soft/73.png"
   },
   {
     "type": "title",
@@ -1151,23 +1151,23 @@ VALUES ('Ghost Win 7 2022 – No & Full Soft, Full Driver Update April 2022', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.jpg?v=1650032828"
+    "url": "/images/soft/74.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.April_.2022.jpg?v=1650032829"
+    "url": "/images/soft/75.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.FullSoft.png?v=1650032570"
+    "url": "/images/soft/76.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.FS_.png?v=1650032569"
+    "url": "/images/soft/77.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.Update.png?v=1650032574"
+    "url": "/images/soft/78.png"
   },
   {
     "type": "title",
@@ -1220,23 +1220,23 @@ VALUES ('Ghost Win 7 2021 – No & Full Soft, Full Driver Update April 2021', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/04/Ghost.Win7_.2021.jpg?v=1618408909"
+    "url": "/images/soft/79.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/04/Win7.April_.20201.jpg?v=1649162931"
+    "url": "/images/soft/80.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/04/Win-7-2021-Full-Soft.jpg?v=1618408912"
+    "url": "/images/soft/81.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.FS_.png?v=1650032569"
+    "url": "/images/soft/82.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.Update.png?v=1650032574"
+    "url": "/images/soft/83.png"
   },
   {
     "type": "title",
@@ -1289,23 +1289,23 @@ VALUES ('Ghost Win 7 2020 – No & Full Soft, Full Update March 2020', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2020/03/ghost-win7-2020-moi-nhat.jpg?v=1607068439"
+    "url": "/images/soft/84.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2020/03/ghost-win7-2020.jpg?v=1649162947"
+    "url": "/images/soft/85.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2020/03/ghost-win7-fullsoft.jpg?v=1607068437"
+    "url": "/images/soft/86.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.FS_.png?v=1650032569"
+    "url": "/images/soft/87.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.Update.png?v=1650032574"
+    "url": "/images/soft/88.png"
   },
   {
     "type": "title",
@@ -1358,23 +1358,23 @@ VALUES ('Ghost Win 7 Ultimate 2018 – Full Soft Không Cá Nhân Hóa', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2018/06/2018-06-12_205046.jpg?v=1649162965"
+    "url": "/images/soft/89.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2018/06/2018-06-12_205123.jpg"
+    "url": "/images/soft/90.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2018/06/2018-06-12_205235.jpg"
+    "url": "/images/soft/91.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2018/06/2018-06-12_205349.jpg"
+    "url": "/images/soft/92.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.Update.png?v=1650032574"
+    "url": "/images/soft/93.png"
   },
   {
     "type": "title",
@@ -1427,23 +1427,23 @@ VALUES ('Ghost Win 7 Ultimate 2018 – No Soft & Full Driver', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2018/02/2008-01-01_001457.jpg?v=1649162968"
+    "url": "/images/soft/94.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2018/02/2008-01-01_001508.jpg"
+    "url": "/images/soft/95.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2018/02/2008-01-01_001528.jpg"
+    "url": "/images/soft/96.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2018/06/2018-06-12_205349.jpg"
+    "url": "/images/soft/97.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.Update.png?v=1650032574"
+    "url": "/images/soft/98.png"
   },
   {
     "type": "title",
@@ -1496,23 +1496,23 @@ VALUES ('Ghost Win 7 Ultimate – Full Soft, New Summer 2016', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2016/05/2016-05-05_192101-1.jpg"
+    "url": "/images/soft/99.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2016/05/2016-05-05_192019-1.jpg?v=1649162978"
+    "url": "/images/soft/100.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2016/05/2016-05-05_192202-1.png"
+    "url": "/images/soft/101.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2018/06/2018-06-12_205349.jpg"
+    "url": "/images/soft/102.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/04/Win7.2022.Update.png?v=1650032574"
+    "url": "/images/soft/103.png"
   },
   {
     "type": "title",
@@ -1565,23 +1565,23 @@ VALUES ('Ghost Win 7 Lite Autumn – Nhanh, Mượt, Nhẹ', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2016/01/ghost-win7-lite-6.jpg?v=1649162977"
+    "url": "/images/soft/104.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2016/01/ghost-win7-lite-2.jpg"
+    "url": "/images/soft/105.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2016/01/ghost-win7-lite-1.jpg"
+    "url": "/images/soft/106.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2016/01/ghost-win7-lite-3.png"
+    "url": "/images/soft/107.png"
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2016/01/ghost-win7-lite-4.png"
+    "url": "/images/soft/108.png"
   },
   {
     "type": "title",
@@ -1660,7 +1660,7 @@ VALUES ('Download Windows 11 22H2 Chính Thức Từ Microsoft', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/09/download_win11_22h2.png?v=1663720993"
+    "url": "/images/soft/109.png"
   },
   {
     "type": "para",
@@ -1679,7 +1679,7 @@ VALUES ('Tải Về Windows 11 21H2 2021 Chính Thức Từ Microsoft', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/10/windows11-1536x864.jpg?v=1649162917"
+    "url": "/images/soft/110.png"
   },
   {
     "type": "title",
@@ -1719,7 +1719,7 @@ VALUES ('Tải Về Windows 11 21H2 2021 Chính Thức Từ Microsoft', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/10/download-windows11.png?v=1633442265"
+    "url": "/images/soft/111.png"
   },
   {
     "type": "para",
@@ -1738,7 +1738,7 @@ VALUES ('Download Windows 10 22H2 (October 2022 Update) Chính Thức', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Windows-10-22H2-1536x856.png?v=1666161497"
+    "url": "/images/soft/112.png"
   },
   {
     "type": "title",
@@ -1776,7 +1776,7 @@ VALUES ('Download Windows 10 22H2 (October 2022 Update) Chính Thức', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Windows10.22H2.png?v=1666160850"
+    "url": "/images/soft/113.png"
   },
   {
     "type": "para",
@@ -1799,7 +1799,7 @@ VALUES ('Download Windows 10 Enterprise LTSC 2021 Mới Nhất', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/11/win10.lstc_.2021-1170x550.png"
+    "url": "/images/soft/114.png"
   },
   {
     "type": "title",
@@ -1837,7 +1837,7 @@ VALUES ('Download Windows 10 Enterprise LTSC 2021 Mới Nhất', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Windows10.22H2.png?v=1666160850"
+    "url": "/images/soft/115.png"
   },
   {
     "type": "para",
@@ -1860,7 +1860,7 @@ VALUES ('Windows 10 20H2 (October 2020 Update) Chính Thức', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/11/win10.lstc_.2021-1170x550.png"
+    "url": "/images/soft/116.png"
   },
   {
     "type": "title",
@@ -1898,7 +1898,7 @@ VALUES ('Windows 10 20H2 (October 2020 Update) Chính Thức', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/10/Windows10.22H2.png?v=1666160850"
+    "url": "/images/soft/117.png"
   },
   {
     "type": "para",
@@ -1917,7 +1917,7 @@ VALUES ('Driver Booster 10 – Update Driver Online Tốt Nhất', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2020/07/Driver.Booster.10.png?v=1664723994"
+    "url": "/images/soft/118.png"
   },
   {
     "type": "title",
@@ -1953,7 +1953,7 @@ VALUES ('Easy Driver 7.22.0912.2 – Bộ Cài Driver Offline Mới Nhất', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2020/06/Easydrv7_2022.png"
+    "url": "/images/soft/119.png"
   },
   {
     "type": "para",
@@ -1980,7 +1980,7 @@ VALUES ('3DP Net 21.01 – Hỗ Trợ Cài Driver Mạng Offline Tốt Nhất', 
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2017/12/1.jpg"
+    "url": "/images/soft/120.png"
   },
   {
     "type": "text",
@@ -1988,7 +1988,7 @@ VALUES ('3DP Net 21.01 – Hỗ Trợ Cài Driver Mạng Offline Tốt Nhất', 
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2017/12/2.jpg"
+    "url": "/images/soft/121.png"
   },
   {
     "type": "para",
@@ -2015,7 +2015,7 @@ VALUES ('Wandriver 6.6 – Bộ Cài Đặt Driver Offline Tốt Nhất', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2016/09/Wandrv-6.6.jpg"
+    "url": "/images/soft/122.png"
   },
   {
     "type": "title",
@@ -2045,7 +2045,7 @@ VALUES ('Dism++ 10.1.1002.1 – Quản Lý, Tối Ưu Hệ Thống Máy Tính', 
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/05/Dism.png?v=1652800324"
+    "url": "/images/soft/123.png"
   },
   {
     "type": "text",
@@ -2094,7 +2094,7 @@ VALUES ('StartAllBack – Tuỳ Biến Start Menu, Taskbar Cho Windows 11', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/10/StartAllBack1.png?v=1649162910"
+    "url": "/images/soft/124.png"
   },
   {
     "type": "title",
@@ -2119,7 +2119,7 @@ VALUES ('StartAllBack – Tuỳ Biến Start Menu, Taskbar Cho Windows 11', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/10/StartAllBack-1536x810.png?v=1635695231"
+    "url": "/images/soft/125.png"
   }
 ]', 1, 51881, CURRENT_TIMESTAMP);
 INSERT INTO Software(title, content, authorId, amountView, createDate)
@@ -2134,7 +2134,7 @@ VALUES ('Download Office 2021 Pro VL + Hướng Dẫn Cài Đặt', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/10/Office2021-750x430.png"
+    "url": "/images/soft/126.png"
   },
   {
     "type": "title",
@@ -2161,7 +2161,7 @@ VALUES ('Download Office 2021 Pro VL + Hướng Dẫn Cài Đặt', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/10/Office.2021.png"
+    "url": "/images/soft/127.png"
   },
   {
     "type": "title",
@@ -2180,7 +2180,7 @@ VALUES ('Download Office 2013 Pro VL + Hướng Dẫn Cài Đặt', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/07/office-2013.jpg?v=1625883560"
+    "url": "/images/soft/128.png"
   },
   {
     "type": "title",
@@ -2214,7 +2214,7 @@ VALUES ('Update Control 2.0 – Công Cụ Tắt Update Trên Windows 10/11', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2021/02/update.control.2.0.png?v=1649162960"
+    "url": "/images/soft/129.png"
   }
 ]', 1, 46611, CURRENT_TIMESTAMP);
 INSERT INTO Software(title, content, authorId, amountView, createDate)
@@ -2229,7 +2229,7 @@ VALUES ('Defender Control 2.1 – Vô Hiệu Hóa Windows Defender', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2020/05/Defender.Control.png"
+    "url": "/images/soft/130.png"
   },
   {
     "type": "title",
@@ -2270,7 +2270,7 @@ VALUES ('NET Framework All In One 1.1 – 6.0.6 Offline', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2018/01/NET-Framework.jpg"
+    "url": "/images/soft/131.png"
   },
   {
     "type": "title",
@@ -2338,7 +2338,7 @@ VALUES ('Thay Đổi Ngày Hết Hạn Mật Khẩu Trong Windows 10/11', '[
   },
   {
     "type": "image",
-    "url": "https://lehait.net/wp-content/uploads/2022/05/maxagepw.png"
+    "url": "/images/soft/132.png"
   },
   {
     "type": "text",

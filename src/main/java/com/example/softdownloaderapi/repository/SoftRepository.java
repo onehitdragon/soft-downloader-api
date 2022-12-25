@@ -108,4 +108,13 @@ public class SoftRepository {
 
         return result;
     }
+
+    public void addViewing(int id){
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        String queryStr = "UPDATE software SET amountView = amountView + 1 WHERE id = " + id;
+        session.createNativeQuery(queryStr).executeUpdate();
+        transaction.commit();
+        session.close();
+    }
 }
