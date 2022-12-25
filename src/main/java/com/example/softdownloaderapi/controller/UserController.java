@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.softdownloaderapi.model.CheckingUserResult;
 import com.example.softdownloaderapi.model.ResponseMessage;
+import com.example.softdownloaderapi.model.ResponseMessageWithOption;
 import com.example.softdownloaderapi.model.User;
 import com.example.softdownloaderapi.repository.UserRepository;
 
@@ -42,6 +43,10 @@ public class UserController {
         }
 
         userRepository.insertUser(user);
-        return new ResponseEntity<ResponseMessage>(new ResponseMessage("success", ""), HttpStatus.OK);
+        User result = userRepository.checkUser(user).getUser();
+        return new ResponseEntity<ResponseMessage>(
+            new ResponseMessageWithOption<User>("success", "", result),
+            HttpStatus.OK
+        );
     }
 }
