@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.softdownloaderapi.model.CheckingUserResult;
 import com.example.softdownloaderapi.model.ResponseMessage;
 import com.example.softdownloaderapi.model.User;
-import com.example.softdownloaderapi.model.Role;
 import com.example.softdownloaderapi.repository.UserRepository;
 
 @RestController
@@ -36,12 +35,13 @@ public class UserController {
         user.setUsername(username);
         user.setPassword(password);
         user.setFullName(fullname);
-        user.setRole(new Role("2"));
 
-        CheckingUserResult userResult = userRepository.checkUser(user);
-        if(userResult.isResult()){
+        boolean usernameIsExist = userRepository.checkUsername(username);
+        if(usernameIsExist){
             return new ResponseEntity<ResponseMessage>(new ResponseMessage("error", "username is exist"), HttpStatus.BAD_REQUEST);
         }
+
+        userRepository.insertUser(user);
         return new ResponseEntity<ResponseMessage>(new ResponseMessage("success", ""), HttpStatus.OK);
     }
 }

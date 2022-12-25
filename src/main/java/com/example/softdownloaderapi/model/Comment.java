@@ -23,9 +23,6 @@ public class Comment {
     @ManyToOne
     @JoinColumn(name = "commenterId")
     private User commenter;
-    @ManyToOne
-    @JoinColumn(name = "softwareId")
-    private Soft soft;
     @Column
     private Date createDate;
     @Transient
@@ -54,12 +51,6 @@ public class Comment {
     }
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
-    }
-    public Soft getSoft() {
-        return soft;
-    }
-    public void setSoft(Soft soft) {
-        this.soft = soft;
     }
     public List<Comment> getReplyComments() {
         return replyComments;

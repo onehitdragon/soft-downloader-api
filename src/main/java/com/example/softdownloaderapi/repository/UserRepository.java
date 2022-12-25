@@ -38,9 +38,28 @@ public class UserRepository {
         }
     }
 
+    public boolean checkUsername(String username){
+        Session session = sessionFactory.openSession();
+
+        String queryStr = "SELECT * FROM users WHERE username = '"+ username +"'";
+        Query<User> query = session.createNativeQuery(queryStr, User.class);
+        try {
+            query.getSingleResult();
+            return true;
+        } catch (NoResultException e) {
+            return false;
+        }
+        finally {
+            session.close();
+        }
+    } 
+
     public void insertUser(User user){
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        //session.save("Users");
+        String queryStr = "INSERT INTO Users(username, password, fullname, createDate, roleId) VALUES ('"+ user.getUsername() +"', '"+ user.getPassword() +"', '"+ user.getFullName() +"', CURRENT_TIMESTAMP, 1)";
+        session.createNativeQuery(queryStr).executeUpdate();
+        transaction.commit();
+        session.close();
     }
 }
