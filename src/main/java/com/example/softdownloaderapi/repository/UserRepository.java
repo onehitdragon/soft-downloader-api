@@ -1,7 +1,5 @@
 package com.example.softdownloaderapi.repository;
 
-
-
 import org.hibernate.query.Query;
 
 import javax.persistence.NoResultException;
@@ -61,5 +59,14 @@ public class UserRepository {
         session.createNativeQuery(queryStr).executeUpdate();
         transaction.commit();
         session.close();
+    }
+
+    public long getTotalUser(){
+        Session session = sessionFactory.openSession();
+        String queryStr = "SELECT COUNT(id) FROM users WHERE roleId = 2";
+        long result = ((Number)session.createNativeQuery(queryStr).uniqueResult()).longValue();
+        session.close();
+
+        return result;
     }
 }

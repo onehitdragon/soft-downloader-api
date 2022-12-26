@@ -117,4 +117,22 @@ public class SoftRepository {
         transaction.commit();
         session.close();
     }
+
+    public long getTotalView(){
+        Session session = sessionFactory.openSession();
+        String queryStr = "SELECT SUM(amountView) FROM software";
+        long result = ((Number)session.createNativeQuery(queryStr).uniqueResult()).longValue();
+        session.close();
+
+        return result;
+    }
+
+    public long getTotalSoft(){
+        Session session = sessionFactory.openSession();
+        String queryStr = "SELECT COUNT(id) FROM software";
+        long result = ((Number)session.createNativeQuery(queryStr).uniqueResult()).longValue();
+        session.close();
+
+        return result;
+    }
 }

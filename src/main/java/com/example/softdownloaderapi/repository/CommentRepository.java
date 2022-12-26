@@ -82,4 +82,13 @@ public class CommentRepository {
 
         return result;
     }
+
+    public long getTotalComment(){
+        Session session = sessionFactory.openSession();
+        String queryStr = "SELECT COUNT(id) FROM comments";
+        long result = ((Number)session.createNativeQuery(queryStr).uniqueResult()).longValue();
+        session.close();
+
+        return result;
+    }
 }

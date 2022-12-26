@@ -1,6 +1,5 @@
 package com.example.softdownloaderapi.repository;
 
-
 import java.util.List;
 
 import org.hibernate.Session;
@@ -22,6 +21,15 @@ public class ParentCategoryRepository {
         String queryStr = "SELECT * FROM parentcategory";
         Query<ParentCategory> query = session.createNativeQuery(queryStr, ParentCategory.class);
         List<ParentCategory> result = query.getResultList();
+
+        return result;
+    }
+
+    public long getTotalCategory(){
+        Session session = sessionFactory.openSession();
+        String queryStr = "SELECT COUNT(id) FROM childcategory";
+        long result = ((Number)session.createNativeQuery(queryStr).uniqueResult()).longValue();
+        session.close();
 
         return result;
     }
