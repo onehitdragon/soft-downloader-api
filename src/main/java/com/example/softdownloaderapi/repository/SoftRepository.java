@@ -135,4 +135,15 @@ public class SoftRepository {
 
         return result;
     }
+
+    public List<Soft> getAll(){
+        Session session = sessionFactory.openSession();
+        
+        String queryStr = "SELECT * FROM software";
+        Query<Soft> query = session.createNativeQuery(queryStr, Soft.class);
+        List<Soft> result = query.list();
+        session.close();
+
+        return result;
+    }
 }

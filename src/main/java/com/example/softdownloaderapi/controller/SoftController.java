@@ -88,4 +88,9 @@ public class SoftController {
 
         return new ResponseEntity<ResponseMessage>(new ResponseMessage("success", ""), HttpStatus.OK);
     }
+
+    @GetMapping("/getall")
+    public List<Soft> getAllSoft(){
+        return softRepository.getAll();
+    }
 }
