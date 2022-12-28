@@ -2,12 +2,19 @@ package com.example.softdownloaderapi.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
+import com.example.softdownloaderapi.model.ChildCategory;
 import com.example.softdownloaderapi.model.ResponseMessage;
+import com.example.softdownloaderapi.model.ResponseMessageWithOption;
 import com.example.softdownloaderapi.model.Soft;
 import com.example.softdownloaderapi.model.User;
 import com.example.softdownloaderapi.repository.SoftRepository;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -56,8 +63,27 @@ public class SoftController {
     }
 
     @PostMapping("/add")
-    public Soft addSoft(@NotBlank String title, @NotBlank String content,
-        @NotBlank @Min(1) String authorId){
+    public ResponseEntity<ResponseMessage> addSoft(@NotBlank String title, @NotBlank String content, MultipartFile[] images,
+        @NotBlank @Min(1) String authorId, @NotBlank @Min(1) Integer childCategoryId){
+        
+        for(int i = 0; i < images.length; i++){
+            MultipartFile image = images[i];
+            try{
+                String des =  "src\\main\\resources\\static\\images\\soft\\upload\\";
+                des += image.getOriginalFilename();
+                System.out.println(des);
+                Files.copy(image.getInputStream(), Paths.get(des));
+            }
+            catch(IOException ex){
+                ex.printStackTrace();
+                return new ResponseEntity<ResponseMessage>(
+                    new ResponseMessage("error", "image upload error"), 
+                    HttpStatus.OK
+                );
+            }
+            
+        }
+
         Soft soft = new Soft();
 
         User user = new User();
@@ -69,12 +95,25 @@ public class SoftController {
         soft.setAmountView(0);
         soft.setCreateDate(new Date());
 
-        return softRepository.insert(soft);
+        ChildCategory childCategory = new ChildCategory();
+        childCategory.setId(childCategoryId);
+        ArrayList<ChildCategory> childList = new ArrayList<ChildCategory>();
+        childList.add(childCategory);
+        soft.setChildCategories(childList);
+
+        softRepository.insert(soft);
+
+        return new ResponseEntity<ResponseMessage>(
+            new ResponseMessageWithOption<Soft>("success", "", soft),
+            HttpStatus.OK
+        );
     }
 
     @DeleteMapping("/{idSoft}")
-    public void deleteSoft(@PathVariable(value = "idSoft")@NotBlank @Min(1) Integer id){
+    public ResponseEntity<ResponseMessage> deleteSoft(@PathVariable(value = "idSoft")@NotBlank @Min(1) Integer id){
         softRepository.delete(id);
+
+        return new ResponseEntity<ResponseMessage>(new ResponseMessage("success", ""), HttpStatus.OK);
     }
 
     @GetMapping("/search")

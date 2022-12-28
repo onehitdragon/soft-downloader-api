@@ -92,7 +92,9 @@ public class SoftRepository {
     public void delete(int id){
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        String queryStr = "DELETE FROM software WHERE id = " + id;
+        String queryStr = "DELETE FROM softwarecategory WHERE softwareId = " + id;
+        session.createNativeQuery(queryStr).executeUpdate();
+        queryStr = "DELETE FROM software WHERE id = " + id;
         session.createNativeQuery(queryStr).executeUpdate();
         transaction.commit();
         session.close();
