@@ -104,7 +104,7 @@ public class SoftController {
         softRepository.insert(soft);
 
         return new ResponseEntity<ResponseMessage>(
-            new ResponseMessageWithOption<Soft>("success", "", soft),
+            new ResponseMessageWithOption<Soft>("success", "", softRepository.getMaxSoft()),
             HttpStatus.OK
         );
     }
@@ -114,6 +114,53 @@ public class SoftController {
         softRepository.delete(id);
 
         return new ResponseEntity<ResponseMessage>(new ResponseMessage("success", ""), HttpStatus.OK);
+    }
+
+    @PutMapping("/{idSoft}")
+    public ResponseEntity<ResponseMessage> editSoft(@PathVariable(value = "idSoft")@NotBlank @Min(1) Integer id, @NotBlank String title, @NotBlank String content, MultipartFile[] images,
+        @NotBlank @Min(1) String authorId, @NotBlank @Min(1) Integer childCategoryId){
+        
+        if(images != null){
+            for(int i = 0; i < images.length; i++){
+                MultipartFile image = images[i];
+                try{
+                    String des =  "src\\main\\resources\\static\\images\\soft\\upload\\";
+                    des += image.getOriginalFilename();
+                    System.out.println(des);
+                    Files.copy(image.getInputStream(), Paths.get(des));
+                }
+                catch(IOException ex){
+                    ex.printStackTrace();
+                    return new ResponseEntity<ResponseMessage>(
+                        new ResponseMessage("error", "image upload error"), 
+                        HttpStatus.OK
+                    );
+                }
+            }
+        }
+        
+
+        Soft curSoft = softRepository.getSoft(id);
+
+        User user = new User();
+        user.setId(authorId);
+
+        curSoft.setTitle(title);
+        curSoft.setAuthor(user);
+        curSoft.setContent(content);
+
+        ChildCategory childCategory = new ChildCategory();
+        childCategory.setId(childCategoryId);
+        ArrayList<ChildCategory> childList = new ArrayList<ChildCategory>();
+        childList.add(childCategory);
+        curSoft.setChildCategories(childList);
+
+        softRepository.update(curSoft);
+
+        return new ResponseEntity<ResponseMessage>(
+            new ResponseMessageWithOption<Soft>("success", "", softRepository.getSoft(id)),
+            HttpStatus.OK
+        );
     }
 
     @GetMapping("/search")

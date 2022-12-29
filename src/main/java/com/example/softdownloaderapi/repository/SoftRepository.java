@@ -79,6 +79,23 @@ public class SoftRepository {
         }
     }
 
+    public Soft getMaxSoft(){
+        Session session = sessionFactory.openSession();
+        
+        String queryStr = "SELECT * FROM software WHERE id = (SELECT MAX(id) FROM software)";
+        Query<Soft> query = session.createNativeQuery(queryStr, Soft.class);
+        try {
+            Soft result = query.getSingleResult();
+
+            return result;
+        } catch (NoResultException e) {
+            return null;
+        }
+        finally{
+            session.close();
+        }
+    }
+
     public Soft insert(Soft soft){
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
@@ -96,6 +113,14 @@ public class SoftRepository {
         session.createNativeQuery(queryStr).executeUpdate();
         queryStr = "DELETE FROM software WHERE id = " + id;
         session.createNativeQuery(queryStr).executeUpdate();
+        transaction.commit();
+        session.close();
+    }
+
+    public void update(Soft soft){
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.update("software", soft);
         transaction.commit();
         session.close();
     }
